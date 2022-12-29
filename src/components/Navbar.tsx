@@ -9,7 +9,7 @@ import {
   useBreakpointValue,
   Link,
 } from '@chakra-ui/react';
-import { Smiley } from 'phosphor-react';
+import { WhatsappLogo } from 'phosphor-react';
 
 export function Navbar() {
   return (
@@ -29,9 +29,10 @@ export function Navbar() {
             </Flex>
             <Flex alignItems={'center'}>
               <Stack direction={'row'} spacing={2}>
-                <Button leftIcon={<Smiley size={22} />}>
+                <Button leftIcon={<WhatsappLogo size={22} />}>
                   <Link
                     style={{ textDecoration: 'none' }}
+                    s
                     href="https://api.whatsapp.com/send?phone=5598981258283&text=Ol%C3%A1%2C%20Dr%C2%AA.%20Mayana!%20Vim%20pelo%20site.%20Podemos%20conversar%3F%20"
                     isExternal
                   >
