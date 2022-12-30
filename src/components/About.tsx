@@ -10,13 +10,7 @@ import {
   Stack,
   Text,
 } from '@chakra-ui/react';
-import {
-  ArrowBendUpRight,
-  ArrowFatRight,
-  Play,
-  PlayCircle,
-  WhatsappLogo,
-} from 'phosphor-react';
+import { PlayCircle } from 'phosphor-react';
 import { useEffect, useState } from 'react';
 import ReactPlayer from 'react-player';
 
