@@ -41,7 +41,6 @@ export default class Document extends NextDocument {
             />
           </noscript> */}
           {/* GOOGLE TAG MANAGER - END*/}
-          <ColorModeScript initialColorMode={theme.config.initialColorMode} />
           <Main />
           <NextScript />
           {/* GOOGLE ANALYTICS - START */}
