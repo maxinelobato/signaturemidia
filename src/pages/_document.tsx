@@ -1,4 +1,3 @@
-import { ColorModeScript, theme } from '@chakra-ui/react';
 import NextDocument, { Html, Head, Main, NextScript } from 'next/document';
 // import { FB_PIXEL_ID } from '../../lib/FacebookPixel';
 // import { GTM_ID } from '../../lib/GoogleTagManager';
