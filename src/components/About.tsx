@@ -12,7 +12,7 @@ import {
 } from '@chakra-ui/react';
 import { PlayCircle } from 'phosphor-react';
 import { useEffect, useState } from 'react';
-import ReactPlayer from 'react-player';
+import ReactPlayer from 'react-player/lazy';
 
 export function About() {
   const [isSSR, setIsSSR] = useState(true);
@@ -22,7 +22,7 @@ export function About() {
 
   return (
     <Box bgGradient="linear(to-r, blackAlpha.800 10%, blackAlpha.700 20%, blackAlpha.500)">
-      <Container maxW={'7xl'} pt={28}>
+      <Container maxW={'7xl'} pt={28} pb="44">
         <Stack minH={'80vh'} direction={{ base: 'column', md: 'row' }}>
           <Flex p={8} flex={1} align={'center'} justify={'center'}>
             <Stack spacing={6} w={'full'} maxW={'lg'}>
@@ -70,10 +70,11 @@ export function About() {
               top="-20%"
               left={0}
               zIndex={-1}
-              color="#C15E03"
-              overflow="hidden"
+              color="orange.500"
             />
-            {isSSR ? null : <ReactPlayer controls url="/video/humberto.mp4" />}
+            {isSSR ? null : (
+              <ReactPlayer url="https://www.youtube.com/watch?v=AM-IW0Krod4" controls />
+            )}
           </Flex>
         </Stack>
       </Container>
