@@ -1,5 +1,7 @@
 import type { NextPage } from 'next';
 import { About } from '../components/About';
+import { AboutClients } from '../components/AboutClients';
+import { DividerStyle } from '../components/DividerStyle';
 import { Navbar } from '../components/Navbar';
 
 const Home: NextPage = () => {
@@ -7,6 +9,8 @@ const Home: NextPage = () => {
     <>
       <Navbar />
       <About />
+      <DividerStyle />
+      <AboutClients />
     </>
   );
 };

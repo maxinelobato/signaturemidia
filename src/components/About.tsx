@@ -1,18 +1,20 @@
 import {
   Box,
   Container,
-  Divider,
   Flex,
   Heading,
+  HStack,
   Icon,
-  IconButton,
   IconProps,
   Stack,
+  Tag,
+  TagLabel,
+  TagLeftIcon,
   Text,
 } from '@chakra-ui/react';
-import { ArrowBendRightDown } from 'phosphor-react';
+import { ArrowArcRight, ArrowBendDownRight } from 'phosphor-react';
 import { ReactElement, useEffect, useState } from 'react';
-import ReactPlayer from 'react-player/lazy';
+import ReactPlayer from 'react-player/youtube';
 import { ButtonPLAY } from './ButtonPLAY';
 
 interface FeatureProps {
@@ -39,10 +41,10 @@ export function About() {
   }, []);
 
   return (
-    <Box bgGradient="linear(to-t, gray.900, blackAlpha.900)">
+    <Box bgGradient="linear(to-t, gray.900, gray.900, blackAlpha.900 50%)">
       <Container maxW={'7xl'} pt={28} pb="44">
         <Stack minH={'80vh'} direction={{ base: 'column', md: 'row' }}>
-          <Flex flex={1} align={'center'} justify={'left'}>
+          <Flex flex={1} align="center" justify="left">
             <Stack p={{ base: '8', md: '0' }} spacing={6} w={'full'} maxW={'lg'}>
               <Heading fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }}>
                 <Text color="whiteAlpha.900" as={'span'}>
@@ -57,73 +59,19 @@ export function About() {
                 especialistas
               </Text>
               <Stack direction={{ base: 'column', md: 'row' }} spacing={4}>
-                <ButtonPLAY />
-              </Stack>
-            </Stack>
-          </Flex>
-          <Flex
-            flex={1}
-            justify={'center'}
-            align={'center'}
-            position={'relative'}
-            w={'full'}
-          >
-            <Blob
-              w="150%"
-              h="150%"
-              position="absolute"
-              top="-20%"
-              left={0}
-              zIndex={1}
-              color="whiteAlpha.900"
-            />
-            {isSSR ? null : (
-              <Box
-                display="flex"
-                overflow="hidden"
-                rounded="lg"
-                boxShadow="0 4px 8px 0 rgba(255, 255, 255, 0.8), 0 2px 20px 0 rgba(255, 255, 255, 0.8);"
-                zIndex={1}
-              >
-                <ReactPlayer
-                  url="https://www.youtube.com/watch?v=AM-IW0Krod4"
-                  controls
-                />
-              </Box>
-            )}
-          </Flex>
-        </Stack>
-        <Stack justifyContent="center" align="center" direction="row" h="100px">
-          <Divider borderRadius="4px" borderColor="orange.400" variant="solid" />
-          <IconButton
-            color="orange.400"
-            style={{ cursor: 'not-allowed', pointerEvents: 'none' }}
-            variant="unstyled"
-            w={16}
-            h={16}
-            rounded="full"
-            aria-label="Role Down"
-            icon={<ArrowBendRightDown size={40} weight="fill" />}
-          />
-          <Divider borderRadius="4px" borderColor="orange.400" variant="solid" />
-        </Stack>
-        <Stack direction={{ base: 'column', md: 'row' }}>
-          <Flex flex={1} align={'center'} justify={'left'}>
-            <Stack p={{ base: '8', md: '0' }} spacing={6} w={'full'} maxW={'lg'}>
-              <Heading fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }}>
-                <Text color="whiteAlpha.900" as={'span'}>
-                  Está com dificuldade de conseguir mais clientes pro teu negócio?
-                </Text>{' '}
-                <Text color="orange.300" as="span" textShadow="#000 1px 1px">
-                  Faça parte dos 50 clientes que já ajudamos com o Marketing Digital
-                </Text>{' '}
-              </Heading>
-              <Text fontSize={{ base: 'md', lg: 'lg' }} color={'whiteAlpha.700'}>
-                Por que investir em Marketing Digital? Veja o recado de um dos nossos
-                especialistas
-              </Text>
-              <Stack direction={{ base: 'column', md: 'row' }} spacing={4}>
-                <ButtonPLAY />
+                <HStack>
+                  {['lg'].map((size) => (
+                    <Tag size={size} key={size} variant="subtle" colorScheme="orange">
+                      <TagLeftIcon
+                        boxSize="12px"
+                        as={ArrowBendDownRight}
+                        size={32}
+                        weight="fill"
+                      />
+                      <TagLabel>Veja o vídeo</TagLabel>
+                    </Tag>
+                  ))}
+                </HStack>
               </Stack>
             </Stack>
           </Flex>

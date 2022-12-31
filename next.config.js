@@ -13,6 +13,9 @@ module.exports = {
   images: {
     formats: ['image/webp'],
   },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
 };
 
 const withBundleAnalyzer = require('@next/bundle-analyzer')({

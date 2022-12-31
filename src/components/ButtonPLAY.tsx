@@ -8,10 +8,10 @@ export function ButtonPLAY() {
       variant="outline"
       size="lg"
       colorScheme="orange"
-      rightIcon={<YoutubeLogo size={32} weight="fill" />}
+      leftIcon={<YoutubeLogo size={32} weight="fill" />}
       zIndex={2}
     >
-      Aperta o Play
+      Veja o Vídeo
     </Button>
   );
 }
