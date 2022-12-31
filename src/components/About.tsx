@@ -1,18 +1,36 @@
 import {
   Box,
-  Button,
   Container,
+  Divider,
   Flex,
   Heading,
   Icon,
+  IconButton,
   IconProps,
-  Link,
   Stack,
   Text,
 } from '@chakra-ui/react';
-import { PlayCircle } from 'phosphor-react';
-import { useEffect, useState } from 'react';
+import { ArrowBendRightDown } from 'phosphor-react';
+import { ReactElement, useEffect, useState } from 'react';
 import ReactPlayer from 'react-player/lazy';
+import { ButtonPLAY } from './ButtonPLAY';
+
+interface FeatureProps {
+  text: string;
+  iconBg: string;
+  icon?: ReactElement;
+}
+
+const Feature = ({ text, icon, iconBg }: FeatureProps) => {
+  return (
+    <Stack direction="row" align="center">
+      <Flex align="center" justify="center" bg={iconBg} rounded="lg">
+        {icon}
+      </Flex>
+      <Text fontWeight={600}>{text}</Text>
+    </Stack>
+  );
+};
 
 export function About() {
   const [isSSR, setIsSSR] = useState(true);
@@ -21,38 +39,25 @@ export function About() {
   }, []);
 
   return (
-    <Box bgGradient="linear(to-r, blackAlpha.800 10%, blackAlpha.700 20%, blackAlpha.500)">
+    <Box bgGradient="linear(to-t, gray.900, blackAlpha.900)">
       <Container maxW={'7xl'} pt={28} pb="44">
         <Stack minH={'80vh'} direction={{ base: 'column', md: 'row' }}>
-          <Flex p={8} flex={1} align={'center'} justify={'center'}>
-            <Stack spacing={6} w={'full'} maxW={'lg'}>
-              <Heading fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
+          <Flex flex={1} align={'center'} justify={'left'}>
+            <Stack p={{ base: '8', md: '0' }} spacing={6} w={'full'} maxW={'lg'}>
+              <Heading fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }}>
                 <Text color="whiteAlpha.900" as={'span'}>
-                  São mais de 50 Advogados satisfeitos
+                  Está com dificuldade de conseguir mais clientes pro teu negócio?
                 </Text>{' '}
-                <Text color="#C15E03" as="span" textShadow="#000 1px 1px">
-                  com o Tráfego no Google Ads
+                <Text color="orange.300" as="span" textShadow="#000 1px 1px">
+                  Faça parte dos 50 clientes que já ajudamos com o Marketing Digital
                 </Text>{' '}
               </Heading>
               <Text fontSize={{ base: 'md', lg: 'lg' }} color={'whiteAlpha.700'}>
-                Entenda como funciona o nosso mercado com um de nossos especialistas em
-                Tráfego Pago
+                Por que investir em Marketing Digital? Veja o recado de um dos nossos
+                especialistas
               </Text>
               <Stack direction={{ base: 'column', md: 'row' }} spacing={4}>
-                <Button
-                  size="lg"
-                  bgColor="#C15E03"
-                  _hover={{ bgColor: 'orange.400', transition: '0.5s' }}
-                  rightIcon={<PlayCircle size={32} weight="fill" />}
-                >
-                  <Link
-                    style={{ textDecoration: 'none' }}
-                    href="https://api.whatsapp.com/send?phone=5598981258283&text=Ol%C3%A1%2C%20Dr%C2%AA.%20Mayana!%20Vim%20pelo%20site.%20Podemos%20conversar%3F%20"
-                    isExternal
-                  >
-                    Entenda como funciona
-                  </Link>
-                </Button>
+                <ButtonPLAY />
               </Stack>
             </Stack>
           </Flex>
@@ -69,11 +74,88 @@ export function About() {
               position="absolute"
               top="-20%"
               left={0}
-              zIndex={-1}
-              color="orange.500"
+              zIndex={1}
+              color="whiteAlpha.900"
             />
             {isSSR ? null : (
-              <ReactPlayer url="https://www.youtube.com/watch?v=AM-IW0Krod4" controls />
+              <Box
+                display="flex"
+                overflow="hidden"
+                rounded="lg"
+                boxShadow="0 4px 8px 0 rgba(255, 255, 255, 0.8), 0 2px 20px 0 rgba(255, 255, 255, 0.8);"
+                zIndex={1}
+              >
+                <ReactPlayer
+                  url="https://www.youtube.com/watch?v=AM-IW0Krod4"
+                  controls
+                />
+              </Box>
+            )}
+          </Flex>
+        </Stack>
+        <Stack justifyContent="center" align="center" direction="row" h="100px">
+          <Divider borderRadius="4px" borderColor="orange.400" variant="solid" />
+          <IconButton
+            color="orange.400"
+            style={{ cursor: 'not-allowed', pointerEvents: 'none' }}
+            variant="unstyled"
+            w={16}
+            h={16}
+            rounded="full"
+            aria-label="Role Down"
+            icon={<ArrowBendRightDown size={40} weight="fill" />}
+          />
+          <Divider borderRadius="4px" borderColor="orange.400" variant="solid" />
+        </Stack>
+        <Stack direction={{ base: 'column', md: 'row' }}>
+          <Flex flex={1} align={'center'} justify={'left'}>
+            <Stack p={{ base: '8', md: '0' }} spacing={6} w={'full'} maxW={'lg'}>
+              <Heading fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }}>
+                <Text color="whiteAlpha.900" as={'span'}>
+                  Está com dificuldade de conseguir mais clientes pro teu negócio?
+                </Text>{' '}
+                <Text color="orange.300" as="span" textShadow="#000 1px 1px">
+                  Faça parte dos 50 clientes que já ajudamos com o Marketing Digital
+                </Text>{' '}
+              </Heading>
+              <Text fontSize={{ base: 'md', lg: 'lg' }} color={'whiteAlpha.700'}>
+                Por que investir em Marketing Digital? Veja o recado de um dos nossos
+                especialistas
+              </Text>
+              <Stack direction={{ base: 'column', md: 'row' }} spacing={4}>
+                <ButtonPLAY />
+              </Stack>
+            </Stack>
+          </Flex>
+          <Flex
+            flex={1}
+            justify={'center'}
+            align={'center'}
+            position={'relative'}
+            w={'full'}
+          >
+            <Blob
+              w="150%"
+              h="150%"
+              position="absolute"
+              top="-20%"
+              left={0}
+              zIndex={1}
+              color="whiteAlpha.900"
+            />
+            {isSSR ? null : (
+              <Box
+                display="flex"
+                overflow="hidden"
+                rounded="lg"
+                boxShadow="0 4px 8px 0 rgba(255, 255, 255, 0.8), 0 2px 20px 0 rgba(255, 255, 255, 0.8);"
+                zIndex={1}
+              >
+                <ReactPlayer
+                  url="https://www.youtube.com/watch?v=AM-IW0Krod4"
+                  controls
+                />
+              </Box>
             )}
           </Flex>
         </Stack>
