@@ -1,30 +1,10 @@
 import {
-  Flex,
-  Heading,
   // Icon,
-  Image,
-  Stack,
-  Text,
   Box,
   Container,
-  Button,
-  Center,
-  Link,
-  HStack,
-  Tag,
-  TagLeftIcon,
-  TagLabel,
 } from '@chakra-ui/react';
-import {
-  // PresentationChart,
-  // CurrencyCircleDollar,
-  // Browsers,
-  Heart,
-  InstagramLogo,
-} from 'phosphor-react';
 import { Angelica } from './Angelica';
 // import { ReactElement } from 'react';
-import { ButtonWTP } from './ButtonWTP';
 import { Humberto } from './Humberto';
 
 // interface FeatureProps {
@@ -45,7 +25,6 @@ import { Humberto } from './Humberto';
 // };
 
 export function AboutClients() {
-  const Slide = require('react-reveal/Slide');
   return (
     <Box bgGradient="linear(to-br, gray.900, gray.900, gray.700 50%)">
       <Container maxW={'7xl'} mt={-28}>
