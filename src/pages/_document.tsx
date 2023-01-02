@@ -7,6 +7,22 @@ export default class Document extends NextDocument {
     return (
       <Html lang="pt-BR">
         <Head>
+          <meta
+            property="title"
+            content="Signature Mídia - A sua assinatura no digital"
+          />
+          <meta
+            name="description"
+            content="Landing Pages, Tráfego Pago Google, Facebook, Instagram Ads, Social Mídia"
+          />
+          <meta property="url" content="https://signaturemidia.vercel.app/" />
+          <meta property="type" content="website" />
+          <link rel="icon" href="/favicon.ico" />
+          <link rel="preload" href="/img/signaturemidia.svg" as="image" />
+          <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+          <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+          <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+          <link rel="manifest" href="/site.webmanifest" />
           {/* FACEBOOK PIXEL - START*/}
           {/* <noscript>
             <img
@@ -17,16 +33,6 @@ export default class Document extends NextDocument {
             />
           </noscript> */}
           {/* FACEBOOK PIXEL - END*/}
-          <meta property="title" content="Dra. Mayana Silva - Advogada Criminal" />
-          <meta
-            name="description"
-            content="Advogada Criminal Especialista em Acompanhamento em Delegacia, Atuação em Tribunais, Defesa em Processos Criminais, Execução Penal"
-          />
-          <meta property="url" content="https://mayanasilva.vercel.app/" />
-          <meta property="type" content="website" />
-          <link rel="icon" href="/favicon.ico" />
-          <link rel="preload" href="/img/bgImage.webp" as="image" />
-          <link rel="preload" href="/img/may.webp" as="image" />
         </Head>
         <body>
           {/* 👇 Here's the script */}

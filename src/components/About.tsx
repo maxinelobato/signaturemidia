@@ -45,8 +45,11 @@ export function About() {
       <Container maxW={'7xl'} pt={28} pb="44">
         <Stack minH={'80vh'} direction={{ base: 'column', md: 'row' }}>
           <Flex flex={1} align="center" justify="left">
-            <Stack p={{ base: '8', md: '0' }} spacing={6} w={'full'} maxW={'lg'}>
-              <Heading fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }}>
+            <Stack spacing={6} w={'full'} maxW={'lg'}>
+              <Heading
+                fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }}
+                textAlign={{ base: 'center', md: 'center', lg: 'left' }}
+              >
                 <Text color="whiteAlpha.900" as={'span'}>
                   Está com dificuldade de conseguir mais clientes pro teu negócio?
                 </Text>{' '}
@@ -54,11 +57,21 @@ export function About() {
                   Faça parte dos 50 clientes que já ajudamos com o Marketing Digital
                 </Text>{' '}
               </Heading>
-              <Text fontSize={{ base: 'md', lg: 'lg' }} color={'whiteAlpha.700'}>
+              <Text
+                fontSize={{ base: 'md', lg: 'lg' }}
+                color={'whiteAlpha.700'}
+                textAlign={{ base: 'center', md: 'center', lg: 'left' }}
+              >
                 Por que investir em Marketing Digital? Veja o recado de um dos nossos
                 especialistas
               </Text>
-              <Stack direction={{ base: 'column', md: 'row' }} spacing={4}>
+              <Stack
+                direction={{ base: 'column', md: 'row' }}
+                align={{ base: 'center', md: 'center', lg: 'left' }}
+                spacing={4}
+                pb={8}
+                pt={2}
+              >
                 <HStack>
                   {['lg'].map((size) => (
                     <Tag size={size} key={size} variant="subtle" colorScheme="orange">
