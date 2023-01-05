@@ -27,7 +27,7 @@ import { ButtonWTP } from './ButtonWTP';
 export function Angelica() {
   const Slide = require('react-reveal/Slide');
   return (
-    <Stack direction={{ base: 'column', md: 'row' }} minH={'50vh'} pt={12}>
+    <Stack direction={{ base: 'column', md: 'row' }} minH={'50vh'} pt={12} pb={10}>
       <Flex align="center" justify="center">
         <Stack spacing={6} w={'full'} maxW={'lg'}>
           <HStack spacing={4}>

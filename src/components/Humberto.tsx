@@ -19,7 +19,6 @@ import {
   StatHelpText,
   StatArrow,
   Icon,
-  useColorModeValue,
   SimpleGrid,
 } from '@chakra-ui/react';
 import { ArrowSquareOut, Heart, InstagramLogo } from 'phosphor-react';
@@ -28,7 +27,7 @@ import { ButtonWTP } from './ButtonWTP';
 export function Humberto() {
   const Slide = require('react-reveal/Slide');
   return (
-    <Stack direction={{ base: 'column', md: 'row' }} minH={'100vh'} pt={12}>
+    <Stack direction={{ base: 'column', md: 'row' }} minH={'100vh'} pt={12} pb={10}>
       <Flex align="center" justify="center">
         <Stack spacing={6} w={'full'} maxW={'lg'}>
           <HStack spacing={4}>
@@ -57,9 +56,11 @@ export function Humberto() {
             textAlign={{ base: 'center', md: 'center', lg: 'left' }}
           >
             O Humberto Predrosa é um especialista em Direito Criminal, um dos maiores
-            desafios dele era a captação de clientes, ele mesmo disse: "Um escritório
-            não é igual uma loja de roupas, que a pessoa olha e diz Ahh que escritório
-            lindo, vou entrar!". <br />
+            desafios dele era a captação de clientes, ele mesmo disse:{' '}
+            <div>
+              &#34;Um escritório não é igual uma loja de roupas, que a pessoa olha e diz
+              Ahh que escritório lindo, vou entrar&#33;&#34;
+            </div>
             Em 14 dias fechou 1 contrato de 8 mil e em menos de 1 mês mais 3 contratos.
           </Text>
           <Stack spacing={6}>

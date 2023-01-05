@@ -1,28 +1,6 @@
-import {
-  // Icon,
-  Box,
-  Container,
-} from '@chakra-ui/react';
+import { Box, Container } from '@chakra-ui/react';
 import { Angelica } from './Angelica';
-// import { ReactElement } from 'react';
 import { Humberto } from './Humberto';
-
-// interface FeatureProps {
-//   text: string;
-//   iconBg: string;
-//   icon?: ReactElement;
-// }
-
-// const Feature = ({ text, icon, iconBg }: FeatureProps) => {
-//   return (
-//     <Stack direction="row" align="center">
-//       <Flex align="center" justify="center" bg={iconBg} rounded="lg">
-//         {icon}
-//       </Flex>
-//       <Text fontWeight={600}>{text}</Text>
-//     </Stack>
-//   );
-// };
 
 export function AboutClients() {
   return (
