@@ -13,7 +13,7 @@ export default class Document extends NextDocument {
           />
           <meta
             name="description"
-            content="Landing Pages, Site Institucional, Tráfego Google Ads, Tráfego Facebook e Instagram Ads e Social Mídia"
+            content="Landing Pages | Site Institucional | Tráfego Google Ads | Tráfego Facebook | Tráfego Instagram Ads e Social Mídia"
           />
           <meta property="url" content="https://signaturemidia.vercel.app/" />
           <meta property="type" content="website" />
