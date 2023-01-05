@@ -13,7 +13,7 @@ export default class Document extends NextDocument {
           />
           <meta
             name="description"
-            content="Landing Pages, Tráfego Pago Google, Facebook, Instagram Ads, Social Mídia"
+            content="Landing Pages, Site Institucional, Tráfego Google Ads, Tráfego Facebook e Instagram Ads e Social Mídia"
           />
           <meta property="url" content="https://signaturemidia.vercel.app/" />
           <meta property="type" content="website" />
@@ -35,6 +35,7 @@ export default class Document extends NextDocument {
           {/* FACEBOOK PIXEL - END*/}
         </Head>
         <body>
+          <title>Signature Mídia - A sua assinatura no digital</title>
           {/* 👇 Here's the script */}
           {/* GOOGLE TAG MANAGER - START*/}
           {/* <noscript>
