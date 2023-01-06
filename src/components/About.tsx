@@ -72,17 +72,15 @@ export function About() {
                 pt={2}
               >
                 <HStack>
-                  {['lg'].map((size) => (
-                    <Tag size={size} key={size} variant="subtle" colorScheme="orange">
-                      <TagLeftIcon
-                        boxSize="12px"
-                        as={ArrowBendDownRight}
-                        size={32}
-                        weight="fill"
-                      />
-                      <TagLabel>Veja o vídeo</TagLabel>
-                    </Tag>
-                  ))}
+                  <Tag size="lg" variant="subtle" colorScheme="orange">
+                    <TagLeftIcon
+                      boxSize="12px"
+                      as={ArrowBendDownRight}
+                      size={32}
+                      weight="fill"
+                    />
+                    <TagLabel>Veja o vídeo</TagLabel>
+                  </Tag>
                 </HStack>
               </Stack>
             </Stack>
@@ -100,16 +98,15 @@ export function About() {
               position="absolute"
               top="-20%"
               left={0}
-              zIndex={1}
               color="whiteAlpha.900"
             />
             {isSSR ? null : (
               <Box
+                zIndex={1}
                 display="flex"
                 overflow="hidden"
                 rounded="lg"
                 boxShadow="0 4px 8px 0 rgba(255, 255, 255, 0.8), 0 2px 20px 0 rgba(255, 255, 255, 0.8);"
-                zIndex={1}
               >
                 <ReactPlayer
                   url="https://www.youtube.com/watch?v=AM-IW0Krod4"

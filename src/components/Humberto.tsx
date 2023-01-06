@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import {
   Stack,
   Flex,
@@ -31,12 +32,10 @@ export function Humberto() {
       <Flex align="center" justify="center">
         <Stack spacing={6} w={'full'} maxW={'lg'}>
           <HStack spacing={4}>
-            {['lg'].map((size) => (
-              <Tag size={size} key={size} variant="subtle" colorScheme="orange">
-                <TagLeftIcon boxSize="12px" as={Heart} size={32} weight="fill" />
-                <TagLabel>Nossos Clientes</TagLabel>
-              </Tag>
-            ))}
+            <Tag size="lg" variant="subtle" colorScheme="orange">
+              <TagLeftIcon boxSize="12px" as={Heart} size={32} weight="fill" />
+              <TagLabel>Nossos Clientes</TagLabel>
+            </Tag>
           </HStack>
           <Heading
             fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }}
@@ -57,10 +56,11 @@ export function Humberto() {
           >
             O Humberto Predrosa é um especialista em Direito Criminal, um dos maiores
             desafios dele era a captação de clientes, ele mesmo disse:{' '}
-            <div>
-              &#34;Um escritório não é igual uma loja de roupas, que a pessoa olha e diz
-              Ahh que escritório lindo, vou entrar&#33;&#34;
-            </div>
+            <i>
+              "Um escritório não é igual uma loja de roupas, que a pessoa olha e diz Ahh
+              que escritório lindo, vou entrar!".
+            </i>{' '}
+            <br />
             Em 14 dias fechou 1 contrato de 8 mil e em menos de 1 mês mais 3 contratos.
           </Text>
           <Stack spacing={6}>
