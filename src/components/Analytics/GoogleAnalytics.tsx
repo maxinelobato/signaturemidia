@@ -3,7 +3,7 @@ import Script from 'next/script';
 import { useRouter } from 'next/router';
 import * as gtag from '../../../lib/GoogleAnalytics';
 
-const GoogleAnalytics = () => {
+export const GoogleAnalytics = () => {
   const router = useRouter();
   useEffect(() => {
     const handleRouteChange = () => {
@@ -41,5 +41,3 @@ const GoogleAnalytics = () => {
     </>
   );
 };
-
-export default GoogleAnalytics;
