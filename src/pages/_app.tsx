@@ -1,6 +1,5 @@
 import { ChakraProvider, extendTheme, ThemeConfig } from '@chakra-ui/react';
 import type { AppProps, NextWebVitalsMetric } from 'next/app';
-import GoogleTagManager from '../components/Analytics/GoogleTagManager';
 
 const config: ThemeConfig = {
   initialColorMode: 'dark',
@@ -14,7 +13,6 @@ const theme = extendTheme({
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider theme={theme} resetCSS={true}>
-      <GoogleTagManager />
       <Component {...pageProps} />
     </ChakraProvider>
   );
