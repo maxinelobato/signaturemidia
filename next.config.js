@@ -4,7 +4,6 @@ const nextConfig = {
   swcMinify: true,
   experimental: {
     webVitalsAttribution: ['CLS', 'LCP', 'FCP', 'FID', 'INP', 'TTFB'],
-    nextScriptWorkers: true,
   },
 };
 
@@ -12,7 +11,7 @@ module.exports = nextConfig;
 
 module.exports = {
   images: {
-    formats: ['image/webp', 'image/svg', 'image/png'],
+    formats: ['image/webp'],
   },
   typescript: {
     ignoreBuildErrors: true,

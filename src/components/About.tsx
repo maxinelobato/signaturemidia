@@ -12,10 +12,9 @@ import {
   TagLeftIcon,
   Text,
 } from '@chakra-ui/react';
-import { ArrowArcRight, ArrowBendDownRight } from 'phosphor-react';
+import { ArrowBendDownRight } from 'phosphor-react';
 import { ReactElement, useEffect, useState } from 'react';
 import ReactPlayer from 'react-player/youtube';
-import { ButtonPLAY } from './ButtonPLAY';
 
 interface FeatureProps {
   text: string;
