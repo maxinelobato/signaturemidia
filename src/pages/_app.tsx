@@ -1,5 +1,8 @@
 import { ChakraProvider, extendTheme, ThemeConfig } from '@chakra-ui/react';
 import type { AppProps, NextWebVitalsMetric } from 'next/app';
+import GAnalytics from '../components/Analytics/GAnalytics';
+// import GTag from '../components/Analytics/GTag';
+import { ScrollView } from '../components/ScrollView';
 
 const config: ThemeConfig = {
   initialColorMode: 'dark',
@@ -13,6 +16,9 @@ const theme = extendTheme({
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider theme={theme} resetCSS={true}>
+      {/* <GTag /> */}
+      <GAnalytics />
+      <ScrollView />
       <Component {...pageProps} />
     </ChakraProvider>
   );

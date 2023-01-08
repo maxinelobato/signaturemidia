@@ -22,7 +22,7 @@ import {
   SimpleGrid,
 } from '@chakra-ui/react';
 import { ArrowSquareOut, Heart, InstagramLogo } from 'phosphor-react';
-import { ButtonWTP } from './ButtonWTP';
+import { ButtonWTP } from '../ButtonWTP';
 
 export function Angelica() {
   const Slide = require('react-reveal/Slide');
