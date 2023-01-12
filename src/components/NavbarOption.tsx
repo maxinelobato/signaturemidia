@@ -1,5 +1,4 @@
-import { Box, Flex, Container, Image, Center } from '@chakra-ui/react';
-import Typewriter from 'typewriter-effect';
+import { Box, Flex, Container, Image, Center, Text } from '@chakra-ui/react';
 
 export function NavbarOption() {
   return (
@@ -25,15 +24,10 @@ export function NavbarOption() {
               />
             </Flex>
           </Flex>
-          <Center mt={-3} fontFamily="heading" fontSize="sm">
-            <Typewriter
-              options={{
-                strings: ['A sua assinatura no digital'],
-                autoStart: true,
-                loop: false,
-                delay: 20,
-              }}
-            />
+          <Center mt={-3}>
+            <Text fontFamily="heading" fontSize="sm">
+              A sua assinatura no digital
+            </Text>
           </Center>
         </Container>
       </Box>
