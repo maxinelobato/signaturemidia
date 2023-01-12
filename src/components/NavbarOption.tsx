@@ -30,7 +30,7 @@ export function NavbarOption() {
               options={{
                 strings: ['A sua assinatura no digital'],
                 autoStart: true,
-                loop: true,
+                loop: false,
                 delay: 20,
               }}
             />
