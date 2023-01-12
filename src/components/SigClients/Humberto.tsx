@@ -26,7 +26,6 @@ import { ArrowSquareOut, Heart, InstagramLogo } from 'phosphor-react';
 import { ButtonWTP } from '../ButtonWTP';
 
 export function Humberto() {
-  const Slide = require('react-reveal/Slide');
   return (
     <Stack direction={{ base: 'column', md: 'row' }} minH={'100vh'} pt={-10} pb={10}>
       <Flex align="center" justify="center">
@@ -143,35 +142,33 @@ export function Humberto() {
       </Flex>
       <Flex flex={1} align="center" justifyContent="right">
         <Center py={6}>
-          <Slide duration={400} right>
-            <Box boxShadow="dark-lg" rounded="lg" overflow="hidden">
-              <Image
-                h="30rem"
-                maxW="100%"
-                alt="..."
-                objectFit="cover"
-                src="/img/humberto.webp"
-              />
-              <Button
-                as={Link}
-                borderRadius="none"
-                w="full"
-                color="whiteAlpha.900"
-                bgColor="blackAlpha.800"
-                leftIcon={<InstagramLogo size={32} weight="fill" />}
-                style={{ textDecoration: 'none' }}
-                _hover={{
-                  bgColor: 'blackAlpha.900',
-                  color: 'orange.300',
-                  transition: '0.5s',
-                }}
-                href="https://www.instagram.com/humbertopedrosa.adv/"
-                isExternal
-              >
-                @humbertopedrosa.adv
-              </Button>
-            </Box>
-          </Slide>
+          <Box boxShadow="dark-lg" rounded="lg" overflow="hidden">
+            <Image
+              h="30rem"
+              maxW="100%"
+              alt="..."
+              objectFit="cover"
+              src="/img/humberto.webp"
+            />
+            <Button
+              as={Link}
+              borderRadius="none"
+              w="full"
+              color="whiteAlpha.900"
+              bgColor="blackAlpha.800"
+              leftIcon={<InstagramLogo size={32} weight="fill" />}
+              style={{ textDecoration: 'none' }}
+              _hover={{
+                bgColor: 'blackAlpha.900',
+                color: 'orange.300',
+                transition: '0.5s',
+              }}
+              href="https://www.instagram.com/humbertopedrosa.adv/"
+              isExternal
+            >
+              @humbertopedrosa.adv
+            </Button>
+          </Box>
         </Center>
       </Flex>
     </Stack>
