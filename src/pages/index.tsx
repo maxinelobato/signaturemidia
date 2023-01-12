@@ -1,16 +1,18 @@
 import type { NextPage } from 'next';
 import { About } from '../components/About';
-import { DividerStyle } from '../components/DividerStyle';
-import { Navbar } from '../components/Navbar';
+import { AboutHelpYou } from '../components/AboutHelpYou';
+import { NavbarOption } from '../components/NavbarOption';
+import { Notice } from '../components/Notice';
 import { AboutClients } from '../components/SigClients/AboutClients';
 
 const Home: NextPage = () => {
   return (
     <>
-      <Navbar />
+      <NavbarOption />
       <About />
-      <DividerStyle />
+      <AboutHelpYou />
       <AboutClients />
+      <Notice />
     </>
   );
 };

@@ -6,9 +6,9 @@ export function ButtonPLAY() {
     <Button
       style={{ cursor: 'not-allowed', pointerEvents: 'none' }}
       variant="outline"
-      size="lg"
+      size={{ base: 'md', md: 'lg' }}
       colorScheme="orange"
-      leftIcon={<YoutubeLogo size={32} weight="fill" />}
+      leftIcon={<YoutubeLogo size={22} weight="fill" />}
       zIndex={2}
     >
       Veja o Vídeo

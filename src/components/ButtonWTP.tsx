@@ -8,14 +8,11 @@ export function ButtonWTP() {
       size={{ base: 'md', md: 'lg' }}
       bgColor="orange.500"
       color="whiteAlpha.900"
-      boxShadow="0 4px 8px 0 rgba(193, 94, 3, 0.5), 0 2px 20px 0 rgba(193, 94, 3, 0.5)"
       style={{ textDecoration: 'none' }}
       _hover={{
         bgColor: 'whiteAlpha.900',
         color: 'blackAlpha.900',
         transition: '0.4s',
-        shadow:
-          '0 4px 8px 0 rgba(255, 255, 255, 0.5), 0 2px 20px 0 rgba(255, 255, 255, 0.5)',
         transform: 'scale(1.1)',
       }}
       leftIcon={<WhatsappLogo size={22} weight="fill" />}

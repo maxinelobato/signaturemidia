@@ -3,18 +3,16 @@ import {
   Container,
   Flex,
   Heading,
-  HStack,
   Icon,
   IconProps,
   Stack,
-  Tag,
-  TagLabel,
-  TagLeftIcon,
   Text,
 } from '@chakra-ui/react';
 import { ArrowBendDownRight } from 'phosphor-react';
 import { ReactElement, useEffect, useState } from 'react';
 import ReactPlayer from 'react-player/youtube';
+import { ButtonPLAY } from './ButtonPLAY';
+import { ButtonWTP } from './ButtonWTP';
 
 interface FeatureProps {
   text: string;
@@ -40,8 +38,8 @@ export function About() {
   }, []);
 
   return (
-    <Box bgGradient="linear(to-t, gray.900, gray.900, blackAlpha.900 50%)">
-      <Container maxW={'7xl'} pt={28} pb="44">
+    <Box bgGradient="linear(to-t, blackAlpha.900, rgba(193, 94, 3, 0.5) 150% )">
+      <Container maxW={'7xl'} pt={28} pb="20">
         <Stack minH={'80vh'} direction={{ base: 'column', md: 'row' }}>
           <Flex flex={1} align="center" justify="left">
             <Stack spacing={6} w={'full'} maxW={'lg'}>
@@ -71,17 +69,8 @@ export function About() {
                 pb={8}
                 pt={2}
               >
-                <HStack>
-                  <Tag size="lg" variant="subtle" colorScheme="orange">
-                    <TagLeftIcon
-                      boxSize="12px"
-                      as={ArrowBendDownRight}
-                      size={32}
-                      weight="fill"
-                    />
-                    <TagLabel>Veja o vídeo</TagLabel>
-                  </Tag>
-                </HStack>
+                <ButtonWTP />
+                <ButtonPLAY />
               </Stack>
             </Stack>
           </Flex>

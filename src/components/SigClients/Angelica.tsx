@@ -30,12 +30,6 @@ export function Angelica() {
     <Stack direction={{ base: 'column', md: 'row' }} minH={'50vh'} pt={12} pb={10}>
       <Flex align="center" justify="center">
         <Stack spacing={6} w={'full'} maxW={'lg'}>
-          <HStack spacing={4}>
-            <Tag size="lg" variant="subtle" colorScheme="orange">
-              <TagLeftIcon boxSize="12px" as={Heart} size={32} weight="fill" />
-              <TagLabel>Nossos Clientes</TagLabel>
-            </Tag>
-          </HStack>
           <Heading
             fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }}
             textAlign={{ base: 'center', md: 'center', lg: 'left' }}
