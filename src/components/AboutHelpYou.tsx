@@ -69,7 +69,6 @@ function StatsCard(props: StatsCardProps) {
 }
 
 export function AboutHelpYou() {
-  const Slide = require('react-reveal/Slide');
   return (
     <>
       <Box
