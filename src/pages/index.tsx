@@ -6,6 +6,7 @@ import { HowSigHelpYou } from '../components/HowSigHelpYou';
 import { NavbarOption } from '../components/NavbarOption';
 import { Notice } from '../components/Notice';
 import { AboutClients } from '../components/SigClients/AboutClients';
+import { WithSpeechBubbles } from '../components/WithSpeechBubbles';
 
 const Home: NextPage = () => {
   return (
@@ -16,6 +17,7 @@ const Home: NextPage = () => {
       <AboutClients />
       <Notice />
       <HowSigHelpYou />
+      <WithSpeechBubbles />
     </>
   );
 };

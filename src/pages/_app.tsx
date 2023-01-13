@@ -3,7 +3,6 @@ import type { AppProps, NextWebVitalsMetric } from 'next/app';
 import GAnalytics from '../components/Analytics/GAnalytics';
 import { ScrollWhatsApp } from '../components/ScrollWhatsApp';
 // import GTag from '../components/Analytics/GTag';
-import { ScrollView } from '../components/ScrollView';
 
 const config: ThemeConfig = {
   initialColorMode: 'dark',
@@ -16,11 +15,10 @@ const theme = extendTheme({
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ChakraProvider theme={theme} resetCSS={true}>
+    <ChakraProvider theme={theme}>
       {/* <GTag /> */}
       <ScrollWhatsApp />
       <GAnalytics />
-      <ScrollView />
       <Component {...pageProps} />
     </ChakraProvider>
   );
