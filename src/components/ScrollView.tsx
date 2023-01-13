@@ -16,7 +16,7 @@ export function ScrollView() {
         <motion.path
           fill="none"
           strokeWidth="5"
-          stroke="#fff"
+          stroke="#dd6b20"
           strokeDasharray="0 1"
           d="M 0, 20 a 20, 20 0 1,0 40,0 a 20, 20 0 1,0 -40,0"
           style={{
@@ -30,7 +30,7 @@ export function ScrollView() {
         <motion.path
           fill="none"
           strokeWidth="5"
-          stroke="#fff"
+          stroke="#dd6b20"
           d="M14,26 L 22,33 L 35,16"
           initial={false}
           strokeDasharray="0 1"

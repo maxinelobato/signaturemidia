@@ -1,15 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import {
-  Avatar,
-  Box,
-  Heading,
-  Icon,
-  Link,
-  Stack,
-  Text,
-  useColorModeValue,
-  VStack,
-} from '@chakra-ui/react';
+import { Box, Heading, Icon, Link, Stack, Text, VStack } from '@chakra-ui/react';
 import { ArrowSquareOut, NewspaperClipping } from 'phosphor-react';
 
 export function Notice() {

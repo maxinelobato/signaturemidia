@@ -1,4 +1,5 @@
 import { Box, Flex, Container, Image, Center, Text } from '@chakra-ui/react';
+import '@fontsource/quicksand';
 
 export function NavbarOption() {
   return (
@@ -25,7 +26,7 @@ export function NavbarOption() {
             </Flex>
           </Flex>
           <Center mt={-3}>
-            <Text fontFamily="heading" fontSize="sm">
+            <Text fontFamily="Quicksand" fontSize="sm" color="whiteAlpha.900">
               A sua assinatura no digital
             </Text>
           </Center>

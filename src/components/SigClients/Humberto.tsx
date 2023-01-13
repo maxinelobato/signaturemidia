@@ -2,10 +2,6 @@
 import {
   Stack,
   Flex,
-  HStack,
-  Tag,
-  TagLeftIcon,
-  TagLabel,
   Heading,
   Text,
   Center,
@@ -22,24 +18,21 @@ import {
   Icon,
   SimpleGrid,
 } from '@chakra-ui/react';
-import { ArrowSquareOut, Heart, InstagramLogo } from 'phosphor-react';
+import { ArrowSquareOut, InstagramLogo } from 'phosphor-react';
 import { ButtonWTP } from '../ButtonWTP';
 
 export function Humberto() {
   return (
-    <Stack direction={{ base: 'column', md: 'row' }} minH={'100vh'} pt={-10} pb={10}>
+    <Stack direction={{ base: 'column', md: 'row' }} minH={'50vh'} pt={12} pb={10}>
       <Flex align="center" justify="center">
         <Stack spacing={6} w={'full'} maxW={'lg'}>
           <Heading
             fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }}
             textAlign={{ base: 'center', md: 'center', lg: 'left' }}
           >
-            <Text color="whiteAlpha.900">
-              Conheça alguns dos nossos <i>cases</i> de sucesso na área de Direito
-              Criminal
-            </Text>{' '}
+            <Text color="whiteAlpha.800">Em Direito Criminal</Text>{' '}
             <Text color="orange.300" as="span" textShadow="#000 1px 1px">
-              Dr. Humberto Pedrosa
+              com o Dr. Humberto Pedrosa
             </Text>{' '}
           </Heading>
           <Text
@@ -154,7 +147,7 @@ export function Humberto() {
               as={Link}
               borderRadius="none"
               w="full"
-              color="whiteAlpha.900"
+              color="whiteAlpha.800"
               bgColor="blackAlpha.800"
               leftIcon={<InstagramLogo size={32} weight="fill" />}
               style={{ textDecoration: 'none' }}

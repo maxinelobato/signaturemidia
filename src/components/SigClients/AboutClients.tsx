@@ -11,7 +11,7 @@ import {
   Text,
   VStack,
 } from '@chakra-ui/react';
-import { Heart } from 'phosphor-react';
+import { ArrowArcLeft, Heart } from 'phosphor-react';
 import { Angelica } from './Angelica';
 import { Humberto } from './Humberto';
 
@@ -51,7 +51,7 @@ export function AboutClients() {
               fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }}
               textAlign={{ base: 'center', md: 'center', lg: 'center' }}
             >
-              <Text color="whiteAlpha.900">Conheça alguns dos nossos</Text>{' '}
+              <Text color="whiteAlpha.800">Conheça alguns dos nossos</Text>{' '}
               <Text color="orange.300" as="span" textShadow="#000 1px 1px">
                 <i>cases</i> de Sucesso
               </Text>{' '}

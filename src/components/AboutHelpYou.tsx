@@ -113,7 +113,7 @@ export function AboutHelpYou() {
                   fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }}
                   textAlign={{ base: 'center', md: 'center', lg: 'center' }}
                 >
-                  <Text color="whiteAlpha.900">Você está feliz com a</Text>{' '}
+                  <Text color="whiteAlpha.800">Você está feliz com a</Text>{' '}
                   <Text color="orange.300" as="span" textShadow="#000 1px 1px">
                     <i>captação de clientes</i> no seu negócio?
                   </Text>{' '}

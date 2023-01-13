@@ -47,7 +47,7 @@ export function About() {
                 fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }}
                 textAlign={{ base: 'center', md: 'center', lg: 'left' }}
               >
-                <Text color="whiteAlpha.900" as={'span'}>
+                <Text color="whiteAlpha.800" as={'span'}>
                   Está com dificuldade de conseguir mais clientes pro teu negócio?
                 </Text>{' '}
                 <Text color="orange.300" as="span" textShadow="#000 1px 1px">
@@ -87,7 +87,7 @@ export function About() {
               position="absolute"
               top="-20%"
               left={0}
-              color="whiteAlpha.900"
+              color="whiteAlpha.800"
             />
             {isSSR ? null : (
               <Box

@@ -7,10 +7,10 @@ export function ButtonWTP() {
       as={Link}
       size={{ base: 'md', md: 'lg' }}
       bgColor="orange.500"
-      color="whiteAlpha.900"
+      color="whiteAlpha.800"
       style={{ textDecoration: 'none' }}
       _hover={{
-        bgColor: 'whiteAlpha.900',
+        bgColor: 'whiteAlpha.800',
         color: 'blackAlpha.900',
         transition: '0.4s',
         transform: 'scale(1.1)',

@@ -1,10 +1,6 @@
 import {
   Stack,
   Flex,
-  HStack,
-  Tag,
-  TagLeftIcon,
-  TagLabel,
   Heading,
   Text,
   Center,
@@ -21,7 +17,7 @@ import {
   Icon,
   SimpleGrid,
 } from '@chakra-ui/react';
-import { ArrowSquareOut, Heart, InstagramLogo } from 'phosphor-react';
+import { ArrowSquareOut, InstagramLogo } from 'phosphor-react';
 import { ButtonWTP } from '../ButtonWTP';
 
 export function Angelica() {
@@ -33,12 +29,9 @@ export function Angelica() {
             fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }}
             textAlign={{ base: 'center', md: 'center', lg: 'left' }}
           >
-            <Text color="whiteAlpha.900">
-              Conheça alguns dos nossos <i>cases</i> de sucesso na área de Direito de
-              Família e Sucessões
-            </Text>{' '}
+            <Text color="whiteAlpha.800">Em Direito de Família e Sucessões</Text>{' '}
             <Text color="orange.300" as="span" textShadow="#000 1px 1px">
-              Dra. Angélica Ramos
+              com a Dra. Angélica Ramos
             </Text>{' '}
           </Heading>
           <Text
@@ -150,7 +143,7 @@ export function Angelica() {
               as={Link}
               borderRadius="none"
               w="full"
-              color="whiteAlpha.900"
+              color="whiteAlpha.800"
               bgColor="blackAlpha.800"
               leftIcon={<InstagramLogo size={32} weight="fill" />}
               style={{ textDecoration: 'none' }}
