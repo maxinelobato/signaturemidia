@@ -5,12 +5,12 @@ import {
   LazyMotion,
   domAnimation,
   useTransform,
-  useViewportScroll,
+  useScroll,
 } from 'framer-motion';
 import { useEffect } from 'react';
 
 export function NavbarOption() {
-  const { scrollYProgress } = useViewportScroll();
+  const { scrollYProgress } = useScroll();
   const scaleX = useTransform(scrollYProgress, [0, 1], [1, 0]);
   useEffect(() => {
     console.log('scrollYProgress changed');
@@ -30,13 +30,13 @@ export function NavbarOption() {
         <LazyMotion features={domAnimation}>
           <motion.div
             style={{
+              scaleX,
               position: 'fixed',
               top: 0,
               left: 0,
               right: 0,
-              height: '2px',
+              height: '4px',
               borderRadius: '8px',
-              scaleX,
               background: '#dd6b20',
             }}
           />

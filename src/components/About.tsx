@@ -64,10 +64,9 @@ export function About() {
               </Text>
               <Stack
                 direction={{ base: 'column', md: 'row' }}
-                align={{ base: 'center', md: 'center', lg: 'left' }}
                 spacing={4}
+                py={2}
                 pb={8}
-                pt={2}
               >
                 <ButtonWTP />
                 <ButtonPLAY />
