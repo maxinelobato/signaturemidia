@@ -13,6 +13,11 @@ import {
   Link,
 } from '@chakra-ui/react';
 import { GoogleLogo, Star } from 'phosphor-react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Navigation, Pagination } from 'swiper';
+
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 const Testimonial = ({ children }: { children: ReactNode }) => {
   return <Box>{children}</Box>;
@@ -146,131 +151,277 @@ export function WithSpeechBubbles() {
           direction={{ base: 'column', md: 'row' }}
           spacing={{ base: 10, md: 4, lg: 10 }}
         >
-          <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
-            <Testimonial>
-              <TestimonialContent>
-                <TestimonialHeading>Jéssica Castro</TestimonialHeading>
-                <Box display="flex" mt="2" alignItems="center">
-                  {Array(5)
-                    .fill('')
-                    .map((_, i) => (
-                      <Star
-                        weight="fill"
-                        key={i}
-                        color={i < ReviewsGoogle.rating ? '#FBBC04' : 'gray'}
-                      />
-                    ))}
-                  <Box as="span" ml="2" color="whiteAlpha.800" fontSize="sm">
-                    6 meses atrás
-                  </Box>
-                </Box>
-                <TestimonialText>
+          <Swiper
+            style={{ color: '#fff' }}
+            spaceBetween={30}
+            centeredSlides={true}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            pagination={{
+              clickable: true,
+            }}
+            navigation={true}
+            modules={[Autoplay, Pagination, Navigation]}
+            onSlideChange={() => console.log('slide change')}
+            onSwiper={(swiper) => console.log(swiper)}
+          >
+            <SwiperSlide>
+              <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
+                <Testimonial>
+                  <TestimonialContent>
+                    <TestimonialHeading>Jéssica Castro</TestimonialHeading>
+                    <Box display="flex" mt="2" alignItems="center">
+                      {Array(5)
+                        .fill('')
+                        .map((_, i) => (
+                          <Star
+                            weight="fill"
+                            key={i}
+                            color={i < ReviewsGoogle.rating ? '#FBBC04' : 'gray'}
+                          />
+                        ))}
+                      <Box as="span" ml="2" color="whiteAlpha.800" fontSize="sm">
+                        6 meses atrás
+                      </Box>
+                    </Box>
+                    <TestimonialText>
+                      <Link
+                        style={{ textDecoration: 'none' }}
+                        href="https://goo.gl/maps/QW4c3tmNHeRmZt3T6"
+                        isExternal
+                      >
+                        A signature presta um serviço de excelente qualidade. Sempre me
+                        atendeu muito bem, sempre no prazo, de forma personalizada e foi
+                        essencial para desenvolver meu negócio! Recomendo demais!
+                      </Link>
+                    </TestimonialText>
+                  </TestimonialContent>
                   <Link
                     style={{ textDecoration: 'none' }}
-                    href="https://goo.gl/maps/QW4c3tmNHeRmZt3T6"
+                    href="https://www.instagram.com/meio_juridico/"
                     isExternal
                   >
-                    A signature presta um serviço de excelente qualidade. Sempre me
-                    atendeu muito bem, sempre no prazo, de forma personalizada e foi
-                    essencial para desenvolver meu negócio! Recomendo demais!
+                    <TestimonialAvatar
+                      src={'/img/jessicacastro.jpg'}
+                      name={'Jéssica Castro'}
+                      title={'@meio_juridico'}
+                    />
                   </Link>
-                </TestimonialText>
-              </TestimonialContent>
-              <Link
-                style={{ textDecoration: 'none' }}
-                href="https://www.instagram.com/meio_juridico/"
-                isExternal
-              >
-                <TestimonialAvatar
-                  src={'/img/jessicacastro.jpg'}
-                  name={'Jéssica Castro'}
-                  title={'@meio_juridico'}
-                />
-              </Link>
-            </Testimonial>
-            <Testimonial>
-              <TestimonialContent>
-                <TestimonialHeading>Jéssica Castro</TestimonialHeading>
-                <Box display="flex" mt="2" alignItems="center">
-                  {Array(5)
-                    .fill('')
-                    .map((_, i) => (
-                      <Star
-                        weight="fill"
-                        key={i}
-                        color={i < ReviewsGoogle.rating ? '#FBBC04' : 'gray'}
-                      />
-                    ))}
-                  <Box as="span" ml="2" color="whiteAlpha.800" fontSize="sm">
-                    6 meses atrás
-                  </Box>
-                </Box>
-                <TestimonialText>
+                </Testimonial>
+                <Testimonial>
+                  <TestimonialContent>
+                    <TestimonialHeading>Jéssica Castro</TestimonialHeading>
+                    <Box display="flex" mt="2" alignItems="center">
+                      {Array(5)
+                        .fill('')
+                        .map((_, i) => (
+                          <Star
+                            weight="fill"
+                            key={i}
+                            color={i < ReviewsGoogle.rating ? '#FBBC04' : 'gray'}
+                          />
+                        ))}
+                      <Box as="span" ml="2" color="whiteAlpha.800" fontSize="sm">
+                        6 meses atrás
+                      </Box>
+                    </Box>
+                    <TestimonialText>
+                      <Link
+                        style={{ textDecoration: 'none' }}
+                        href="https://goo.gl/maps/QW4c3tmNHeRmZt3T6"
+                        isExternal
+                      >
+                        A signature presta um serviço de excelente qualidade. Sempre me
+                        atendeu muito bem, sempre no prazo, de forma personalizada e foi
+                        essencial para desenvolver meu negócio! Recomendo demais!
+                      </Link>
+                    </TestimonialText>
+                  </TestimonialContent>
                   <Link
                     style={{ textDecoration: 'none' }}
-                    href="https://goo.gl/maps/QW4c3tmNHeRmZt3T6"
+                    href="https://www.instagram.com/meio_juridico/"
                     isExternal
                   >
-                    A signature presta um serviço de excelente qualidade. Sempre me
-                    atendeu muito bem, sempre no prazo, de forma personalizada e foi
-                    essencial para desenvolver meu negócio! Recomendo demais!
+                    <TestimonialAvatar
+                      src={'/img/jessicacastro.jpg'}
+                      name={'Jéssica Castro'}
+                      title={'@meio_juridico'}
+                    />
                   </Link>
-                </TestimonialText>
-              </TestimonialContent>
-              <Link
-                style={{ textDecoration: 'none' }}
-                href="https://www.instagram.com/meio_juridico/"
-                isExternal
-              >
-                <TestimonialAvatar
-                  src={'/img/jessicacastro.jpg'}
-                  name={'Jéssica Castro'}
-                  title={'@meio_juridico'}
-                />
-              </Link>
-            </Testimonial>
-            <Testimonial>
-              <TestimonialContent>
-                <TestimonialHeading>Jéssica Castro</TestimonialHeading>
-                <Box display="flex" mt="2" alignItems="center">
-                  {Array(5)
-                    .fill('')
-                    .map((_, i) => (
-                      <Star
-                        weight="fill"
-                        key={i}
-                        color={i < ReviewsGoogle.rating ? '#FBBC04' : 'gray'}
-                      />
-                    ))}
-                  <Box as="span" ml="2" color="whiteAlpha.800" fontSize="sm">
-                    6 meses atrás
-                  </Box>
-                </Box>
-                <TestimonialText>
+                </Testimonial>
+                <Testimonial>
+                  <TestimonialContent>
+                    <TestimonialHeading>Jéssica Castro</TestimonialHeading>
+                    <Box display="flex" mt="2" alignItems="center">
+                      {Array(5)
+                        .fill('')
+                        .map((_, i) => (
+                          <Star
+                            weight="fill"
+                            key={i}
+                            color={i < ReviewsGoogle.rating ? '#FBBC04' : 'gray'}
+                          />
+                        ))}
+                      <Box as="span" ml="2" color="whiteAlpha.800" fontSize="sm">
+                        6 meses atrás
+                      </Box>
+                    </Box>
+                    <TestimonialText>
+                      <Link
+                        style={{ textDecoration: 'none' }}
+                        href="https://goo.gl/maps/QW4c3tmNHeRmZt3T6"
+                        isExternal
+                      >
+                        A signature presta um serviço de excelente qualidade. Sempre me
+                        atendeu muito bem, sempre no prazo, de forma personalizada e foi
+                        essencial para desenvolver meu negócio! Recomendo demais!
+                      </Link>
+                    </TestimonialText>
+                  </TestimonialContent>
                   <Link
                     style={{ textDecoration: 'none' }}
-                    href="https://goo.gl/maps/QW4c3tmNHeRmZt3T6"
+                    href="https://www.instagram.com/meio_juridico/"
                     isExternal
                   >
-                    A signature presta um serviço de excelente qualidade. Sempre me
-                    atendeu muito bem, sempre no prazo, de forma personalizada e foi
-                    essencial para desenvolver meu negócio! Recomendo demais!
+                    <TestimonialAvatar
+                      src={'/img/jessicacastro.jpg'}
+                      name={'Jéssica Castro'}
+                      title={'@meio_juridico'}
+                    />
                   </Link>
-                </TestimonialText>
-              </TestimonialContent>
-              <Link
-                style={{ textDecoration: 'none' }}
-                href="https://www.instagram.com/meio_juridico/"
-                isExternal
-              >
-                <TestimonialAvatar
-                  src={'/img/jessicacastro.jpg'}
-                  name={'Jéssica Castro'}
-                  title={'@meio_juridico'}
-                />
-              </Link>
-            </Testimonial>
-          </SimpleGrid>
+                </Testimonial>
+              </SimpleGrid>
+            </SwiperSlide>
+            <SwiperSlide>
+              <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
+                <Testimonial>
+                  <TestimonialContent>
+                    <TestimonialHeading>Jéssica Castro 2</TestimonialHeading>
+                    <Box display="flex" mt="2" alignItems="center">
+                      {Array(5)
+                        .fill('')
+                        .map((_, i) => (
+                          <Star
+                            weight="fill"
+                            key={i}
+                            color={i < ReviewsGoogle.rating ? '#FBBC04' : 'gray'}
+                          />
+                        ))}
+                      <Box as="span" ml="2" color="whiteAlpha.800" fontSize="sm">
+                        6 meses atrás
+                      </Box>
+                    </Box>
+                    <TestimonialText>
+                      <Link
+                        style={{ textDecoration: 'none' }}
+                        href="https://goo.gl/maps/QW4c3tmNHeRmZt3T6"
+                        isExternal
+                      >
+                        A signature presta um serviço de excelente qualidade. Sempre me
+                        atendeu muito bem, sempre no prazo, de forma personalizada e foi
+                        essencial para desenvolver meu negócio! Recomendo demais!
+                      </Link>
+                    </TestimonialText>
+                  </TestimonialContent>
+                  <Link
+                    style={{ textDecoration: 'none' }}
+                    href="https://www.instagram.com/meio_juridico/"
+                    isExternal
+                  >
+                    <TestimonialAvatar
+                      src={'/img/jessicacastro.jpg'}
+                      name={'Jéssica Castro'}
+                      title={'@meio_juridico'}
+                    />
+                  </Link>
+                </Testimonial>
+                <Testimonial>
+                  <TestimonialContent>
+                    <TestimonialHeading>Jéssica Castro 2</TestimonialHeading>
+                    <Box display="flex" mt="2" alignItems="center">
+                      {Array(5)
+                        .fill('')
+                        .map((_, i) => (
+                          <Star
+                            weight="fill"
+                            key={i}
+                            color={i < ReviewsGoogle.rating ? '#FBBC04' : 'gray'}
+                          />
+                        ))}
+                      <Box as="span" ml="2" color="whiteAlpha.800" fontSize="sm">
+                        6 meses atrás
+                      </Box>
+                    </Box>
+                    <TestimonialText>
+                      <Link
+                        style={{ textDecoration: 'none' }}
+                        href="https://goo.gl/maps/QW4c3tmNHeRmZt3T6"
+                        isExternal
+                      >
+                        A signature presta um serviço de excelente qualidade. Sempre me
+                        atendeu muito bem, sempre no prazo, de forma personalizada e foi
+                        essencial para desenvolver meu negócio! Recomendo demais!
+                      </Link>
+                    </TestimonialText>
+                  </TestimonialContent>
+                  <Link
+                    style={{ textDecoration: 'none' }}
+                    href="https://www.instagram.com/meio_juridico/"
+                    isExternal
+                  >
+                    <TestimonialAvatar
+                      src={'/img/jessicacastro.jpg'}
+                      name={'Jéssica Castro'}
+                      title={'@meio_juridico'}
+                    />
+                  </Link>
+                </Testimonial>
+                <Testimonial>
+                  <TestimonialContent>
+                    <TestimonialHeading>Jéssica Castro 2</TestimonialHeading>
+                    <Box display="flex" mt="2" alignItems="center">
+                      {Array(5)
+                        .fill('')
+                        .map((_, i) => (
+                          <Star
+                            weight="fill"
+                            key={i}
+                            color={i < ReviewsGoogle.rating ? '#FBBC04' : 'gray'}
+                          />
+                        ))}
+                      <Box as="span" ml="2" color="whiteAlpha.800" fontSize="sm">
+                        6 meses atrás
+                      </Box>
+                    </Box>
+                    <TestimonialText>
+                      <Link
+                        style={{ textDecoration: 'none' }}
+                        href="https://goo.gl/maps/QW4c3tmNHeRmZt3T6"
+                        isExternal
+                      >
+                        A signature presta um serviço de excelente qualidade. Sempre me
+                        atendeu muito bem, sempre no prazo, de forma personalizada e foi
+                        essencial para desenvolver meu negócio! Recomendo demais!
+                      </Link>
+                    </TestimonialText>
+                  </TestimonialContent>
+                  <Link
+                    style={{ textDecoration: 'none' }}
+                    href="https://www.instagram.com/meio_juridico/"
+                    isExternal
+                  >
+                    <TestimonialAvatar
+                      src={'/img/jessicacastro.jpg'}
+                      name={'Jéssica Castro'}
+                      title={'@meio_juridico'}
+                    />
+                  </Link>
+                </Testimonial>
+              </SimpleGrid>
+            </SwiperSlide>
+          </Swiper>
         </Stack>
       </Container>
     </Box>
