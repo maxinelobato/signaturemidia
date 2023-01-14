@@ -14,7 +14,7 @@ import {
 } from '@chakra-ui/react';
 import { GoogleLogo, Star } from 'phosphor-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Navigation, Pagination } from 'swiper';
+import { Autoplay, Navigation } from 'swiper';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -146,26 +146,23 @@ export function WithSpeechBubbles() {
             </Text>{' '}
           </Heading>
         </Stack>
-        <Stack
-          justifyContent="center"
-          direction={{ base: 'column', md: 'row' }}
-          spacing={{ base: 10, md: 4, lg: 10 }}
+        <Swiper
+          style={{ color: '#fff' }}
+          spaceBetween={30}
+          centeredSlides={true}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          navigation={true}
+          modules={[Autoplay, Navigation]}
+          onSlideChange={() => console.log('slide change')}
+          onSwiper={(swiper) => console.log(swiper)}
         >
-          <Swiper
-            style={{ color: '#fff' }}
-            spaceBetween={30}
-            centeredSlides={true}
-            autoplay={{
-              delay: 2500,
-              disableOnInteraction: false,
-            }}
-            pagination={{
-              clickable: true,
-            }}
-            navigation={true}
-            modules={[Autoplay, Pagination, Navigation]}
-            onSlideChange={() => console.log('slide change')}
-            onSwiper={(swiper) => console.log(swiper)}
+          <Stack
+            justifyContent="center"
+            direction={{ base: 'column', md: 'row' }}
+            spacing={{ base: 10, md: 4, lg: 10 }}
           >
             <SwiperSlide>
               <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
@@ -421,8 +418,8 @@ export function WithSpeechBubbles() {
                 </Testimonial>
               </SimpleGrid>
             </SwiperSlide>
-          </Swiper>
-        </Stack>
+          </Stack>
+        </Swiper>
       </Container>
     </Box>
   );
