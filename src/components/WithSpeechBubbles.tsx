@@ -12,6 +12,7 @@ import {
   SimpleGrid,
   Link,
   Icon,
+  AvatarBadge,
 } from '@chakra-ui/react';
 import { ArrowSquareOut, GoogleLogo, Star } from 'phosphor-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -91,7 +92,9 @@ const TestimonialAvatar = ({
 }) => {
   return (
     <Flex align={'center'} mt={8} direction={'column'}>
-      <Avatar loading="lazy" size="lg" src={src} mb={2} />
+      <Avatar loading="lazy" size="lg" src={src} mb={2}>
+        {/* <AvatarBadge boxSize="1.10em" bg="green.500" /> */}
+      </Avatar>
       <Stack spacing={-1} align={'center'}>
         <Text fontWeight={600}>{name}</Text>
         <Text fontSize={'sm'} color={useColorModeValue('gray.600', 'gray.400')}>
