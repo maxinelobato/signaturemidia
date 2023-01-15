@@ -72,12 +72,13 @@ export function AboutHelpYou() {
   return (
     <>
       <Box
-        zIndex={0}
-        bgImage="./img/bgmkt.webp"
-        w="full"
+        bgImage="./img/bgmkt.svg"
         h="auto"
         bgSize="cover"
-        bgPos="center"
+        bgRepeat="no-repeat"
+        bgAttachment="fixed"
+        bgPos="100%"
+        pos="relative"
         _loading={{ _loading: 'lazy' }}
       >
         <Box bgGradient="linear(to-b, blackAlpha.900, rgba(193, 94, 3, 0.5) 150%)">

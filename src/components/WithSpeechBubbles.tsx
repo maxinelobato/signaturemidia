@@ -297,7 +297,7 @@ export function WithSpeechBubbles() {
                     isExternal
                   >
                     <TestimonialAvatar
-                      src={'/img/may.webp'}
+                      src={'/img/may.jpg'}
                       name={'Mayana Silva'}
                       title={'@mayanasilva_adv'}
                     />

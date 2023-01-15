@@ -29,7 +29,7 @@ export function Angelica() {
             fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }}
             textAlign={{ base: 'center', md: 'center', lg: 'left' }}
           >
-            <Text color="whiteAlpha.800">Em Direito de Família e Sucessões</Text>{' '}
+            <Text color="whiteAlpha.800">Em Direito de Família</Text>{' '}
             <Text color="orange.300" as="span" textShadow="#000 1px 1px">
               com a Dra. Angélica Ramos
             </Text>{' '}

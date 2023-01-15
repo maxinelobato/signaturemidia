@@ -9,7 +9,7 @@ import {
   Text,
 } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
-import ReactPlayer from 'react-player/youtube';
+import ReactPlayer from 'react-player';
 import { ButtonPLAY } from './ButtonPLAY';
 import { ButtonWTP } from './ButtonWTP';
 
@@ -72,14 +72,16 @@ export function About() {
             />
             {isSSR ? null : (
               <Box
-                zIndex={1}
+                zIndex={2}
                 display="flex"
                 overflow="hidden"
                 rounded="lg"
                 boxShadow="0 4px 8px 0 rgba(255, 255, 255, 0.8), 0 2px 20px 0 rgba(255, 255, 255, 0.8);"
               >
                 <ReactPlayer
-                  url="https://www.youtube.com/watch?v=AM-IW0Krod4"
+                  width="auto"
+                  height="35rem"
+                  url="/video/humberto.mp4"
                   controls
                 />
               </Box>
