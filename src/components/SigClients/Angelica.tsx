@@ -5,7 +5,7 @@ import {
   Text,
   Center,
   Box,
-  Image,
+  Image as NextImage,
   Button,
   Link,
   StatGroup,
@@ -132,12 +132,16 @@ export function Angelica() {
       <Flex flex={1} align="center" justifyContent="right">
         <Center py={6}>
           <Box boxShadow="dark-lg" rounded="lg" overflow="hidden">
-            <Image
+            <NextImage
+              loading="lazy"
               h="30rem"
               maxW="100%"
               alt="..."
               objectFit="cover"
               src="/img/angelica.webp"
+              sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
             />
             <Button
               as={Link}

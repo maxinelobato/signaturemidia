@@ -78,6 +78,7 @@ export function AboutHelpYou() {
         h="auto"
         bgSize="cover"
         bgPos="center"
+        _loading={{ _loading: 'lazy' }}
       >
         <Box bgGradient="linear(to-b, blackAlpha.900, rgba(193, 94, 3, 0.5) 150%)">
           <Container maxW={'7xl'}>
@@ -121,7 +122,7 @@ export function AboutHelpYou() {
             <Center>
               <Container maxW={'2xl'}>
                 <Stack textAlign={'center'}>
-                  <SimpleGrid columns={{ base: 2, md: 1 }} spacing={{ base: 5, lg: 5 }}>
+                  <SimpleGrid columns={{ base: 1, md: 1 }} spacing={{ base: 5, lg: 5 }}>
                     <StatsCard
                       title={
                         'Caso a resposta seja NÃO, nós da Signature Mídia iremos te mostrar como os nossos clientes alcançam mais clientes todos os meses'

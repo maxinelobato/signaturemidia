@@ -45,6 +45,9 @@ export function NavbarOption() {
           <Flex flex={1} h={16} alignItems="center" justifyContent="center">
             <Flex alignItems="center">
               <Image
+                sizes="(max-width: 768px) 100vw,
+                (max-width: 1200px) 50vw,
+                33vw"
                 height={{ base: 32, md: 36 }}
                 width={{ base: 32, md: 36 }}
                 src="/signaturemidia.svg"
