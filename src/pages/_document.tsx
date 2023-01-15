@@ -1,6 +1,6 @@
 import NextDocument, { Html, Head, Main, NextScript } from 'next/document';
 // import { FB_PIXEL_ID } from '../../lib/fpixel';
-import { GTM_ID } from '../../lib/gtm';
+// import { GTM_ID } from '../../lib/gtm';
 export default class Document extends NextDocument {
   render() {
     return (
@@ -33,7 +33,7 @@ export default class Document extends NextDocument {
           </noscript> */}
           {/* FACEBOOK PIXEL - END */}
           {/* Global Site Tag (gtag.js) - Google Analytics - START */}
-          <script
+          {/* <script
             dangerouslySetInnerHTML={{
               __html: `
             window.dataLayer = window.dataLayer || [];
@@ -41,7 +41,7 @@ export default class Document extends NextDocument {
             gtag('js', new Date());
           `,
             }}
-          />
+          /> */}
           {/* Global Site Tag (gtag.js) - Google Analytics - END */}
         </Head>
         <body>
