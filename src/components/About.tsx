@@ -8,28 +8,10 @@ import {
   Stack,
   Text,
 } from '@chakra-ui/react';
-import { ArrowBendDownRight } from 'phosphor-react';
-import { ReactElement, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import ReactPlayer from 'react-player/youtube';
 import { ButtonPLAY } from './ButtonPLAY';
 import { ButtonWTP } from './ButtonWTP';
-
-interface FeatureProps {
-  text: string;
-  iconBg: string;
-  icon?: ReactElement;
-}
-
-const Feature = ({ text, icon, iconBg }: FeatureProps) => {
-  return (
-    <Stack direction="row" align="center">
-      <Flex align="center" justify="center" bg={iconBg} rounded="lg">
-        {icon}
-      </Flex>
-      <Text fontWeight={600}>{text}</Text>
-    </Stack>
-  );
-};
 
 export function About() {
   const [isSSR, setIsSSR] = useState(true);

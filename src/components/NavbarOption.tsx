@@ -39,11 +39,8 @@ export function NavbarOption() {
               borderRadius: '8px',
               background: '#dd6b20',
             }}
-          />
+          ></motion.div>
         </LazyMotion>
-        {Array.from({ length: 100 }).map((_, i) => (
-          <Box key={i} />
-        ))}
         <Container maxW="7xl" pt={2}>
           <Flex flex={1} h={16} alignItems="center" justifyContent="center">
             <Flex alignItems="center">

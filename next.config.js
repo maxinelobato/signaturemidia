@@ -11,7 +11,8 @@ module.exports = nextConfig;
 
 module.exports = {
   images: {
-    formats: ['image/webp'],
+    formats: ['image/webp', 'image/png', 'image/jpg'],
+    minimumCacheTTL: 60,
   },
   typescript: {
     ignoreBuildErrors: true,

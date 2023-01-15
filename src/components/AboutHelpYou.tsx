@@ -52,7 +52,7 @@ function StatsCard(props: StatsCardProps) {
                 {icon}
               </Box>
             </VStack>
-            <Box color="whiteAlpha.800" p={5}>
+            <Box color="whiteAlpha.800" p={2}>
               <StatLabel
                 fontSize={['sm', 'md', 'lg']}
                 fontWeight={'normal'}
@@ -72,10 +72,12 @@ export function AboutHelpYou() {
   return (
     <>
       <Box
+        zIndex={0}
         bgImage="./img/bgmkt.webp"
+        w="full"
+        h="auto"
         bgSize="cover"
-        bgPosition="center"
-        bgRepeat="no-repeat"
+        bgPos="center"
       >
         <Box bgGradient="linear(to-b, blackAlpha.900, rgba(193, 94, 3, 0.5) 150%)">
           <Container maxW={'7xl'}>
@@ -105,7 +107,7 @@ export function AboutHelpYou() {
                 </Box>
               </Box>
             </VStack>
-            <Stack textAlign={'center'} align={'center'} py={{ base: 12, md: 20 }}>
+            <Stack textAlign={'center'} align={'center'} py={{ base: 12, md: 16 }}>
               <Heading
                 fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }}
                 textAlign={{ base: 'center', md: 'center', lg: 'center' }}
@@ -119,30 +121,30 @@ export function AboutHelpYou() {
             <Center>
               <Container maxW={'2xl'}>
                 <Stack textAlign={'center'}>
-                  <SimpleGrid columns={{ base: 1, md: 1 }} spacing={{ base: 5, lg: 5 }}>
+                  <SimpleGrid columns={{ base: 2, md: 1 }} spacing={{ base: 5, lg: 5 }}>
                     <StatsCard
                       title={
                         'Caso a resposta seja NÃO, nós da Signature Mídia iremos te mostrar como os nossos clientes alcançam mais clientes todos os meses'
                       }
-                      icon={<NumberCircleOne size={'5em'} weight="duotone" />}
+                      icon={<NumberCircleOne size={'4em'} weight="duotone" />}
                     />
                     <StatsCard
                       title={
                         'A nossa missão é fazer você ter mais reconhecimento, posicionamento e escala para ter clientes qualificados fechando contratos com você'
                       }
-                      icon={<NumberCircleTwo size={'5em'} weight="duotone" />}
+                      icon={<NumberCircleTwo size={'4em'} weight="duotone" />}
                     />
                     <StatsCard
                       title={
                         'Esqueça a compra de seguidores, isso NÃO PAGA suas contas'
                       }
-                      icon={<NumberCircleThree size={'5em'} weight="duotone" />}
+                      icon={<NumberCircleThree size={'4em'} weight="duotone" />}
                     />
                     <StatsCard
                       title={
                         'Ter a oportunidade de transformar o seu negócio, para que ele seja sólido na internet, trazendo solidez e recorrência'
                       }
-                      icon={<NumberCircleFour size={'5em'} weight="duotone" />}
+                      icon={<NumberCircleFour size={'4em'} weight="duotone" />}
                     />
                   </SimpleGrid>
                 </Stack>
