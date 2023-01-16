@@ -11,6 +11,7 @@ import {
   VStack,
   Stat,
   Center,
+  Divider,
 } from '@chakra-ui/react';
 import {
   Lightbulb,
@@ -19,54 +20,6 @@ import {
   NumberCircleThree,
   NumberCircleTwo,
 } from 'phosphor-react';
-import { ReactNode } from 'react';
-
-interface StatsCardProps {
-  title: string;
-  icon: ReactNode;
-}
-
-function StatsCard(props: StatsCardProps) {
-  const { title, icon } = props;
-
-  return (
-    <Stat
-      px={{ base: 5, md: 4 }}
-      py={5}
-      backdropFilter="auto"
-      backdropBlur="1rem"
-      bgColor="whiteAlpha.50"
-      shadow="xl"
-      border="1px solid"
-      borderColor="whiteAlpha.200"
-      rounded="lg"
-    >
-      <Flex
-        justifyContent={{ base: 'center', md: 'center' }}
-        direction={{ base: 'column-reverse', md: 'column' }}
-      >
-        <Box>
-          <Stack direction={{ base: 'column', md: 'row' }}>
-            <VStack>
-              <Box color="orange.400" my="auto">
-                {icon}
-              </Box>
-            </VStack>
-            <Box color="whiteAlpha.800" p={2}>
-              <StatLabel
-                fontSize={['sm', 'md', 'lg']}
-                fontWeight={'normal'}
-                textAlign={{ base: 'center', md: 'left' }}
-              >
-                {title}
-              </StatLabel>
-            </Box>
-          </Stack>
-        </Box>
-      </Flex>
-    </Stat>
-  );
-}
 
 export function AboutHelpYou() {
   return (
@@ -124,7 +77,49 @@ export function AboutHelpYou() {
               <Container maxW={'2xl'}>
                 <Stack textAlign={'center'}>
                   <SimpleGrid columns={{ base: 1, md: 1 }} spacing={{ base: 5, lg: 5 }}>
-                    <StatsCard
+                    <Stat
+                      px={{ base: 5, md: 4 }}
+                      py={5}
+                      backdropFilter="auto"
+                      backdropBlur="1rem"
+                      bgColor="whiteAlpha.50"
+                      shadow="xl"
+                      border="1px solid"
+                      borderColor="whiteAlpha.200"
+                      rounded="lg"
+                    >
+                      <Flex
+                        justifyContent={{ base: 'center', md: 'center' }}
+                        direction={{ base: 'column-reverse', md: 'column' }}
+                      >
+                        <Box>
+                          <Stack direction={{ base: 'column', md: 'row' }}>
+                            <VStack>
+                              <Box color="orange.400" my="auto">
+                                {/* <NumberCircleOne size={'4em'} weight="duotone" /> */}
+                                <Stack direction="row" h="100px" p={4}>
+                                  <Center height="50px">
+                                    <Divider orientation="vertical" variant="thick" />
+                                  </Center>
+                                </Stack>
+                              </Box>
+                            </VStack>
+                            <Box color="whiteAlpha.800" p={2}>
+                              <StatLabel
+                                fontSize={['sm', 'md', 'lg']}
+                                fontWeight={'normal'}
+                                textAlign={{ base: 'center', md: 'left' }}
+                              >
+                                Caso a resposta seja NÃO, nós da Signature Mídia iremos
+                                te mostrar como os nossos clientes alcançam mais
+                                clientes todos os meses
+                              </StatLabel>
+                            </Box>
+                          </Stack>
+                        </Box>
+                      </Flex>
+                    </Stat>
+                    {/* <StatsCard
                       title={
                         'Caso a resposta seja NÃO, nós da Signature Mídia iremos te mostrar como os nossos clientes alcançam mais clientes todos os meses'
                       }
@@ -147,7 +142,7 @@ export function AboutHelpYou() {
                         'Ter a oportunidade de transformar o seu negócio, para que ele seja sólido na internet, trazendo solidez e recorrência'
                       }
                       icon={<NumberCircleFour size={'4em'} weight="duotone" />}
-                    />
+                    /> */}
                   </SimpleGrid>
                 </Stack>
               </Container>

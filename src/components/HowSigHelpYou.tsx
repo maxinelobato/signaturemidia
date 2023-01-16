@@ -8,7 +8,7 @@ import {
   Text,
   VStack,
 } from '@chakra-ui/react';
-import { ArrowSquareOut, Handshake } from 'phosphor-react';
+import { Handshake } from 'phosphor-react';
 
 export function HowSigHelpYou() {
   return (

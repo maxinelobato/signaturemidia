@@ -1,6 +1,7 @@
 import { ChakraProvider, extendTheme, ThemeConfig } from '@chakra-ui/react';
 import type { AppProps, NextWebVitalsMetric } from 'next/app';
 import { accordionTheme } from '../components/Accordion';
+import { dividerTheme } from '../components/Divider';
 // import { ScrollWhatsApp } from '../components/ScrollWhatsApp';
 // import GAnalytics from '../components/Analytics/GAnalytics';
 // import GTag from '../components/Analytics/GTag';
@@ -14,6 +15,7 @@ const theme = extendTheme({
   config,
   components: {
     Accordion: accordionTheme,
+    Divider: dividerTheme,
   },
 });
 

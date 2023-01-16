@@ -11,7 +11,7 @@ export function ButtonPLAY() {
       leftIcon={<YoutubeLogo size={22} weight="fill" />}
       zIndex={2}
     >
-      Veja o Vídeo
+      Veja a Live
     </Button>
   );
 }

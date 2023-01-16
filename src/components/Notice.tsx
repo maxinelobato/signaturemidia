@@ -34,7 +34,7 @@ export function Notice() {
               textAlign="center"
               fontWeight="bold"
             >
-              Você sabia...
+              Venha crescer com a Signature Mídia
             </Box>
           </Box>
         </VStack>
@@ -44,8 +44,8 @@ export function Notice() {
           maxW="3xl"
           fontStyle="italic"
         >
-          "...que no Brasil tem 134 milhões de usuários de internet e 59% das buscas são
-          sobre produtos e serviços"
+          "Vcê sabia que no Brasil tem 134 milhões de usuários de internet e 59% das
+          buscas são sobre produtos e serviços"
         </Heading>
         <Box
           textAlign={'center'}
@@ -60,7 +60,6 @@ export function Notice() {
           </Text>
         </Box>
         <Heading
-          pt={-10}
           pb={6}
           color="orange.400"
           fontSize={{ base: 'lg', md: '2xl', lg: '3xl' }}
@@ -68,7 +67,7 @@ export function Notice() {
           maxW="3xl"
         >
           Alguns dos nossos clientes tiveram um faturamento de até 60% em seus negócios
-          com a nossa ajuda
+          com a nossa ajuda e além disso...
         </Heading>
       </Stack>
     </Box>

@@ -7,7 +7,12 @@ import {
   IconProps,
   Stack,
   Text,
+  Image as NextImage,
+  Link,
+  IconButton,
+  useColorModeValue,
 } from '@chakra-ui/react';
+import { Play } from 'phosphor-react';
 import { useEffect, useState } from 'react';
 // import ReactPlayer from 'react-player';
 import { ButtonPLAY } from './ButtonPLAY';
@@ -31,10 +36,11 @@ export function About() {
                 textAlign={{ base: 'center', md: 'center', lg: 'left' }}
               >
                 <Text color="whiteAlpha.800" as={'span'}>
-                  Está com dificuldade de conseguir mais clientes pro teu negócio?
+                  Se você está com dificuldade de conseguir mais clientes
                 </Text>{' '}
                 <Text color="orange.300" as="span" textShadow="#000 1px 1px">
-                  Faça parte dos 50 clientes que já ajudamos com o Marketing Digital
+                  Nós já ajudamos mais de 50 clientes em menos de 1 ano a escalar seus
+                  negócios
                 </Text>{' '}
               </Heading>
               <Text
@@ -42,8 +48,9 @@ export function About() {
                 color={'whiteAlpha.700'}
                 textAlign={{ base: 'center', md: 'center', lg: 'left' }}
               >
-                Por que investir em Marketing Digital? Veja o recado de um dos nossos
-                especialistas
+                Por que investir em Marketing Digital? Veja a live que fizemos do
+                Humberto que em 14 dias fechou seu primeiro contrato de 8mil em uma ação
+                Criminal.
               </Text>
               <Stack
                 direction={{ base: 'column', md: 'row' }}
@@ -59,7 +66,7 @@ export function About() {
           <Flex
             flex={1}
             justify={'center'}
-            align={'center'}
+            align="center"
             position={'relative'}
             w={'full'}
           >
@@ -74,8 +81,9 @@ export function About() {
             {isSSR ? null : (
               <Box
                 zIndex={2}
-                display="flex"
                 overflow="hidden"
+                h="35rem"
+                maxW="100%"
                 rounded="lg"
                 boxShadow="0 4px 8px 0 rgba(255, 255, 255, 0.8), 0 2px 20px 0 rgba(255, 255, 255, 0.8);"
               >
@@ -84,8 +92,36 @@ export function About() {
                   height="35rem"
                   url="/video/humberto.mp4"
                   controls
-                /> */}
-                <Player src="/video/humberto.mp4" />
+                />
+              <Player src="/video/humberto.mp4" /> */}
+                <IconButton
+                  as={Link}
+                  aria-label={'Play Button'}
+                  variant="solid"
+                  bgColor="blackAlpha.900"
+                  _hover={{
+                    bgColor: 'orange.400',
+                    transition: '0.4s',
+                  }}
+                  icon={<Play size={24} weight="fill" />}
+                  size={'lg'}
+                  color={'white'}
+                  position={'absolute'}
+                  left={'50%'}
+                  top={'50%'}
+                  transform={'translateX(-50%) translateY(-50%)'}
+                  href="https://www.instagram.com/p/CkRnSKVJf4Y/"
+                  isExternal
+                />
+
+                <NextImage
+                  loading="lazy"
+                  h="35rem"
+                  maxW="100%"
+                  alt="..."
+                  objectFit="cover"
+                  src="/img/livehumberto.jpg"
+                />
               </Box>
             )}
           </Flex>
