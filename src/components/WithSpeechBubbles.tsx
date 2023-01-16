@@ -13,7 +13,7 @@ import {
   Link,
   Icon,
 } from '@chakra-ui/react';
-import { ArrowSquareOut, Heart, Star } from 'phosphor-react';
+import { ArrowSquareOut, Heart, Quotes, Star } from 'phosphor-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper';
 
@@ -85,9 +85,7 @@ const TestimonialAvatar = ({
 }) => {
   return (
     <Flex align={'center'} mt={8} direction={'column'}>
-      <Avatar loading="lazy" size="lg" src={src} mb={2}>
-        {/* <AvatarBadge boxSize="1.10em" bg="green.500" /> */}
-      </Avatar>
+      <Avatar loading="lazy" size="lg" src={src} mb={2}></Avatar>
       <Stack spacing={-1} align={'center'}>
         <Text fontWeight={600}>{name}</Text>
         <Text fontSize={'sm'} color={useColorModeValue('gray.600', 'gray.400')}>
@@ -114,7 +112,7 @@ export function WithSpeechBubbles() {
       pos="relative"
       _loading={{ _loading: 'lazy' }}
     >
-      <Box bgGradient="linear(to-bl, rgba(193, 94, 3, 0.5), blackAlpha.700 80%)">
+      <Box bgGradient="linear(to-b, rgba(193, 94, 3, 0.5), blackAlpha.700 80%)">
         <Container maxW={'6xl'} py={16} as={Stack} spacing={12}>
           <VStack spacing={4}>
             <Box
@@ -189,6 +187,7 @@ export function WithSpeechBubbles() {
                 <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
                   <Testimonial>
                     <TestimonialContent>
+                      <Quotes size={28} weight="fill" />
                       <TestimonialHeading>Jéssica Castro</TestimonialHeading>
                       <Box display="flex" mt="2" alignItems="center">
                         {Array(5)
@@ -200,9 +199,6 @@ export function WithSpeechBubbles() {
                               color={i < ReviewsGoogle.rating ? '#FBBC04' : 'gray'}
                             />
                           ))}
-                        <Box as="span" ml="2" color="whiteAlpha.800" fontSize="sm">
-                          6 meses atrás
-                        </Box>
                       </Box>
                       <TestimonialText>
                         <Link
@@ -231,6 +227,7 @@ export function WithSpeechBubbles() {
                   </Testimonial>
                   <Testimonial>
                     <TestimonialContent>
+                      <Quotes size={28} weight="fill" />
                       <TestimonialHeading>Gustavo Barreto</TestimonialHeading>
                       <Box display="flex" mt="2" alignItems="center">
                         {Array(5)
@@ -242,9 +239,6 @@ export function WithSpeechBubbles() {
                               color={i < ReviewsGoogle.rating ? '#FBBC04' : 'gray'}
                             />
                           ))}
-                        <Box as="span" ml="2" color="whiteAlpha.800" fontSize="sm">
-                          2 meses atrás
-                        </Box>
                       </Box>
                       <TestimonialText>
                         <Link
@@ -271,6 +265,7 @@ export function WithSpeechBubbles() {
                   </Testimonial>
                   <Testimonial>
                     <TestimonialContent>
+                      <Quotes size={28} weight="fill" />
                       <TestimonialHeading>Mayana Silva</TestimonialHeading>
                       <Box display="flex" mt="2" alignItems="center">
                         {Array(5)
@@ -282,9 +277,6 @@ export function WithSpeechBubbles() {
                               color={i < ReviewsGoogle.rating ? '#FBBC04' : 'gray'}
                             />
                           ))}
-                        <Box as="span" ml="2" color="whiteAlpha.800" fontSize="sm">
-                          5 meses atrás
-                        </Box>
                       </Box>
                       <TestimonialText>
                         <Link
@@ -315,6 +307,7 @@ export function WithSpeechBubbles() {
                 <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
                   <Testimonial>
                     <TestimonialContent>
+                      <Quotes size={28} weight="fill" />
                       <TestimonialHeading>Marlon Dettenborn</TestimonialHeading>
                       <Box display="flex" mt="2" alignItems="center">
                         {Array(5)
@@ -326,9 +319,6 @@ export function WithSpeechBubbles() {
                               color={i < ReviewsGoogle.rating ? '#FBBC04' : 'gray'}
                             />
                           ))}
-                        <Box as="span" ml="2" color="whiteAlpha.800" fontSize="sm">
-                          5 meses atrás
-                        </Box>
                       </Box>
                       <TestimonialText>
                         <Link
@@ -355,6 +345,7 @@ export function WithSpeechBubbles() {
                   </Testimonial>
                   <Testimonial>
                     <TestimonialContent>
+                      <Quotes size={28} weight="fill" />
                       <TestimonialHeading>Camila Alves</TestimonialHeading>
                       <Box display="flex" mt="2" alignItems="center">
                         {Array(5)
@@ -366,9 +357,6 @@ export function WithSpeechBubbles() {
                               color={i < ReviewsGoogle.rating ? '#FBBC04' : 'gray'}
                             />
                           ))}
-                        <Box as="span" ml="2" color="whiteAlpha.800" fontSize="sm">
-                          6 meses atrás
-                        </Box>
                       </Box>
                       <TestimonialText>
                         <Link
@@ -396,6 +384,7 @@ export function WithSpeechBubbles() {
                   </Testimonial>
                   <Testimonial>
                     <TestimonialContent>
+                      <Quotes size={28} weight="fill" />
                       <TestimonialHeading>Angelica Lopes</TestimonialHeading>
                       <Box display="flex" mt="2" alignItems="center">
                         {Array(5)
@@ -407,9 +396,6 @@ export function WithSpeechBubbles() {
                               color={i < ReviewsGoogle.rating ? '#FBBC04' : 'gray'}
                             />
                           ))}
-                        <Box as="span" ml="2" color="whiteAlpha.800" fontSize="sm">
-                          1 meses atrás
-                        </Box>
                       </Box>
                       <TestimonialText>
                         <Link

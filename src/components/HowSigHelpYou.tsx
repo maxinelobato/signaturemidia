@@ -12,7 +12,7 @@ import { ArrowSquareOut, Handshake } from 'phosphor-react';
 
 export function HowSigHelpYou() {
   return (
-    <Box bgGradient="linear(to-tl, rgba(193, 94, 3, 0.5), blackAlpha.700 80%)">
+    <Box bgGradient="linear(to-t, rgba(193, 94, 3, 0.5), blackAlpha.700 80%)">
       <Container maxW={'5xl'}>
         <Stack
           py={8}

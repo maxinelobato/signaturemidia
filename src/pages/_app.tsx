@@ -1,7 +1,8 @@
 import { ChakraProvider, extendTheme, ThemeConfig } from '@chakra-ui/react';
 import type { AppProps, NextWebVitalsMetric } from 'next/app';
+import { accordionTheme } from '../components/Accordion';
+// import { ScrollWhatsApp } from '../components/ScrollWhatsApp';
 // import GAnalytics from '../components/Analytics/GAnalytics';
-import { ScrollWhatsApp } from '../components/ScrollWhatsApp';
 // import GTag from '../components/Analytics/GTag';
 
 const config: ThemeConfig = {
@@ -11,13 +12,16 @@ const config: ThemeConfig = {
 
 const theme = extendTheme({
   config,
+  components: {
+    Accordion: accordionTheme,
+  },
 });
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider theme={theme} resetCSS>
       {/* <GTag /> */}
-      <ScrollWhatsApp />
+      {/* <ScrollWhatsApp /> */}
       {/* <GAnalytics /> */}
       <Component {...pageProps} />
     </ChakraProvider>
