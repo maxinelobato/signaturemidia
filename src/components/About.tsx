@@ -12,6 +12,7 @@ import { useEffect, useState } from 'react';
 import ReactPlayer from 'react-player';
 import { ButtonPLAY } from './ButtonPLAY';
 import { ButtonWTP } from './ButtonWTP';
+import Player from './VideoPlayer/Player';
 
 export function About() {
   const [isSSR, setIsSSR] = useState(true);
@@ -78,12 +79,13 @@ export function About() {
                 rounded="lg"
                 boxShadow="0 4px 8px 0 rgba(255, 255, 255, 0.8), 0 2px 20px 0 rgba(255, 255, 255, 0.8);"
               >
-                <ReactPlayer
+                {/* <ReactPlayer
                   width="auto"
                   height="35rem"
                   url="/video/humberto.mp4"
                   controls
-                />
+                /> */}
+                <Player src="/video/humberto.mp4" />
               </Box>
             )}
           </Flex>

@@ -30,7 +30,6 @@ const TestimonialContent = ({ children }: { children: ReactNode }) => {
       backdropFilter="auto"
       backdropBlur="1rem"
       bgColor="blackAlpha.500"
-      shadow="xl"
       rounded="lg"
       boxShadow="base"
       p={8}
@@ -102,16 +101,7 @@ const ReviewsGoogle = {
 
 export function WithSpeechBubbles() {
   return (
-    <Box
-      bgImage="/img/googlereviews.png"
-      h="auto"
-      bgSize="cover"
-      bgRepeat="no-repeat"
-      bgAttachment="fixed"
-      bgPos="90%"
-      pos="relative"
-      _loading={{ _loading: 'lazy' }}
-    >
+    <Box bgImage="/img/googlereviews.svg" h="auto" bgSize="cover" bgRepeat="no-repeat">
       <Box bgGradient="linear(to-b, rgba(193, 94, 3, 0.5), blackAlpha.700 80%)">
         <Container maxW={'6xl'} py={16} as={Stack} spacing={12}>
           <VStack spacing={4}>
@@ -152,7 +142,7 @@ export function WithSpeechBubbles() {
                 no Google Meu Negócio sobre os nossos resultados
               </Text>{' '}
             </Heading>
-            <Stack pt={4} align={'center'}>
+            <Stack pt={4} align={'center'} textAlign="center">
               <Link
                 style={{ textDecoration: 'none' }}
                 href="https://g.page/r/CafZRYsKoFPhEAg/review"
@@ -166,11 +156,10 @@ export function WithSpeechBubbles() {
             </Stack>
           </Stack>
           <Swiper
-            style={{ color: '#fff' }}
             spaceBetween={30}
             centeredSlides={true}
             autoplay={{
-              delay: 3000,
+              delay: 5000,
               disableOnInteraction: false,
             }}
             navigation={true}

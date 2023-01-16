@@ -2,6 +2,7 @@ import {
   Box,
   Button,
   Center,
+  Divider,
   Flex,
   HStack,
   Image,
@@ -10,15 +11,12 @@ import {
   Text,
   VStack,
 } from '@chakra-ui/react';
-import { InstagramLogo } from 'phosphor-react';
+import { GoogleLogo, InstagramLogo } from 'phosphor-react';
 
 export function Footer() {
   return (
-    <Box
-      bgGradient="linear(to-r, blackAlpha.900, blackAlpha.400 )"
-      borderTop="2px"
-      borderColor="#dd6b20"
-    >
+    <Box bgColor="blackAlpha.700" shadow="base">
+      <Divider w="7xl" mx="auto" color="whiteAlpha.900" h="3.5px" />
       <Stack
         direction={{
           base: 'column',
@@ -27,47 +25,63 @@ export function Footer() {
         w="full"
         justify="center"
       >
-        <Flex justify="center">
+        <Flex justify="center" py={8}>
           <Image
-            src="/signaturemidia.svg"
-            alt="Company Logo"
+            loading="lazy"
+            src="/ico/apple-touch-icon.png"
+            alt="Signature Mídia"
             rounded="lg"
+            css={{ filter: 'drop-shadow(0 0 1rem rgba(193, 94, 3, 0.4))' }}
             width={{
-              base: '150px',
-              lg: '200px',
+              base: '4rem',
+              lg: '4rem',
             }}
             height={{
-              base: '75px',
-              lg: '100px',
+              base: '4rem',
+              lg: '4rem',
             }}
           />
         </Flex>
       </Stack>
-      <Center mt={-3}>
-        <Text fontFamily="Quicksand" fontSize="sm" color="whiteAlpha.900">
-          A sua assinatura no digital
-        </Text>
-      </Center>
-      <VStack py={8}>
-        <HStack justify="center">
+      <VStack py={2}>
+        <Stack justify="center" direction={{ base: 'column', md: 'row' }}>
           <Button
             as={Link}
+            bgGradient="linear(to-r, orange.400, orange.200)"
+            color="blackAlpha.900"
             w="full"
-            leftIcon={<InstagramLogo size={32} weight="fill" />}
+            rounded="lg"
             style={{ textDecoration: 'none' }}
             _hover={{
-              bgColor: 'blackAlpha.900',
-              color: 'orange.300',
+              color: 'blackAlpha.800',
               transition: '0.5s',
             }}
+            leftIcon={<InstagramLogo size={32} weight="fill" />}
             href="https://www.instagram.com/signature.midia/"
             isExternal
           >
             Siga o nosso Instagram
           </Button>
-        </HStack>
+          <Button
+            as={Link}
+            bgGradient="linear(to-r, orange.400, orange.200)"
+            color="blackAlpha.900"
+            w="full"
+            rounded="lg"
+            style={{ textDecoration: 'none' }}
+            _hover={{
+              color: 'blackAlpha.800',
+              transition: '0.5s',
+            }}
+            leftIcon={<GoogleLogo size={32} weight="fill" />}
+            href="https://www.instagram.com/signature.midia/"
+            isExternal
+          >
+            Veja nossos Feedbacks
+          </Button>
+        </Stack>
         <VStack>
-          <HStack justify="center" mt={10}>
+          <HStack justify="center" mt={10} pb={4}>
             <Text textAlign="center" fontSize="smaller">
               &copy;Signature Mídia | 2023. Todos os Direitos Reservados.
             </Text>

@@ -17,11 +17,25 @@ export default class Document extends NextDocument {
           />
           <meta property="url" content="https://signaturemidia.vercel.app/" />
           <meta property="type" content="website" />
-          <link rel="icon" href="/favicon.ico" />
+          <link rel="icon" href="/ico/favicon.ico" />
           <link rel="preload" href="/img/signaturemidia.svg" as="image" />
-          <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-          <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-          <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+          <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/ico/apple-touch-icon.png"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/ico/favicon-32x32.png"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/ico/favicon-16x16.png"
+          />
           <link rel="manifest" href="/site.webmanifest" />
           {/* FACEBOOK PIXEL - START */}
           {/* <noscript>

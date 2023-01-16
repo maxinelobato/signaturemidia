@@ -60,7 +60,7 @@ export function Faq() {
               textAlign="center"
               fontWeight="bold"
             >
-              Perguntas e Informações Importantes
+              Informações Importantes
             </Box>
           </Box>
         </VStack>
