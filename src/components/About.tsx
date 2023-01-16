@@ -9,7 +9,7 @@ import {
   Text,
 } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
-import ReactPlayer from 'react-player';
+// import ReactPlayer from 'react-player';
 import { ButtonPLAY } from './ButtonPLAY';
 import { ButtonWTP } from './ButtonWTP';
 import Player from './VideoPlayer/Player';

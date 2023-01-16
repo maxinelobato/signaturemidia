@@ -15,8 +15,12 @@ import { GoogleLogo, InstagramLogo } from 'phosphor-react';
 
 export function Footer() {
   return (
-    <Box bgColor="blackAlpha.700" shadow="base">
-      <Divider w="7xl" mx="auto" color="whiteAlpha.900" h="3.5px" />
+    <Box
+      bgColor="blackAlpha.700"
+      shadow="base"
+      borderTop="1px"
+      borderColor="rgba(193, 94, 3, 0.5)"
+    >
       <Stack
         direction={{
           base: 'column',

@@ -92,7 +92,7 @@ const Player = (props: Props) => {
       element.removeEventListener('progress', onProgress);
       element.removeEventListener('timeupdate', onTimeUpdate);
     };
-  }, [videoRef.current]);
+  }, [isPlaying, isWaiting]);
 
   // This is where the playback rate is set on the video element.
   useEffect(() => {
@@ -179,7 +179,7 @@ const Player = (props: Props) => {
               <Flex
                 h="full"
                 className="play-progress"
-                bg="#0CAADC"
+                bgColor="#dd6b20"
                 zIndex={1}
                 ref={progressRef}
               />
@@ -187,7 +187,7 @@ const Player = (props: Props) => {
                 pos="absolute"
                 h="full"
                 className="buffer-progress"
-                bg="#FDFFFC"
+                bgColor="blackAlpha.900"
                 ref={bufferRef}
               />
             </Flex>
