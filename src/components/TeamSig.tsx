@@ -65,7 +65,7 @@ export function TeamSig() {
           profissionais autonomos a conseguir mais clientes através do Marketing Digital
         </Heading>
         <Container maxW="6xl">
-          <SimpleGrid columns={{ base: 2, md: 4 }} spacing={6}>
+          <SimpleGrid columns={{ base: 1, md: 4 }} spacing={6}>
             <Center py={6}>
               <Box
                 maxW={'320px'}
