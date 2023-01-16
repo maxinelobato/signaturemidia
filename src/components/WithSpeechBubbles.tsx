@@ -110,7 +110,7 @@ export function WithSpeechBubbles() {
       bgSize="cover"
       bgRepeat="no-repeat"
       bgAttachment="fixed"
-      bgPos="100%"
+      bgPos="90%"
       pos="relative"
       _loading={{ _loading: 'lazy' }}
     >

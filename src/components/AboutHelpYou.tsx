@@ -77,7 +77,7 @@ export function AboutHelpYou() {
         bgSize="cover"
         bgRepeat="no-repeat"
         bgAttachment="fixed"
-        bgPos="100%"
+        bgPos="center"
         pos="relative"
         _loading={{ _loading: 'lazy' }}
       >
