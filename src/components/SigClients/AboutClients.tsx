@@ -11,7 +11,7 @@ import {
   Text,
   VStack,
 } from '@chakra-ui/react';
-import { ArrowArcLeft, Heart } from 'phosphor-react';
+import { CircleWavyCheck } from 'phosphor-react';
 import { Angelica } from './Angelica';
 import { Humberto } from './Humberto';
 
@@ -34,7 +34,7 @@ export function AboutClients() {
               mt="2"
               p={5}
             >
-              <Heart size={36} weight="fill" />
+              <CircleWavyCheck size={36} weight="fill" />
               <Box
                 ml="2"
                 color="whiteAlpha.800"
@@ -42,7 +42,7 @@ export function AboutClients() {
                 textAlign="center"
                 fontWeight="bold"
               >
-                Nossos Clientes
+                Cases de Sucesso
               </Box>
             </Box>
           </VStack>

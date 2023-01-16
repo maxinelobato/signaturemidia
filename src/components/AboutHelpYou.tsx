@@ -72,7 +72,7 @@ export function AboutHelpYou() {
   return (
     <>
       <Box
-        bgImage="./img/bgmkt.svg"
+        bgImage="/img/bgmkt.svg"
         h="auto"
         bgSize="cover"
         bgRepeat="no-repeat"

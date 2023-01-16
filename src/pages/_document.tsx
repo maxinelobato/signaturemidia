@@ -1,4 +1,5 @@
 import NextDocument, { Html, Head, Main, NextScript } from 'next/document';
+import Script from 'next/script';
 // import { FB_PIXEL_ID } from '../../lib/fpixel';
 // import { GTM_ID } from '../../lib/gtm';
 export default class Document extends NextDocument {
@@ -47,6 +48,17 @@ export default class Document extends NextDocument {
         <body>
           <title>Signature Mídia - A sua assinatura no digital</title>
           {/* 👇 Here's the script */}
+          {/* LEADSTER - START*/}
+          <Script
+            id="neurolead"
+            strategy="lazyOnload"
+            dangerouslySetInnerHTML={{
+              __html: `
+          (function(n,r,l,d){try{var h=r.head||r.getElementsByTagName("head")[0],s=r.createElement("script");s.defer=true;s.setAttribute("type","text/javascript");s.setAttribute("src",l);n.neuroleadId=d;h.appendChild(s);}catch(e){}})(window,document,"https://cdn.leadster.com.br/neurolead/neurolead.min.js", 72246);
+          `,
+            }}
+          />
+          {/* LEADSTER - END */}
           {/* GOOGLE TAG MANAGER - START */}
           {/* <noscript>
             <iframe
