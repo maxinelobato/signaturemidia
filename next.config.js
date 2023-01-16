@@ -4,6 +4,7 @@ const nextConfig = {
   swcMinify: true,
   experimental: {
     webVitalsAttribution: ['CLS', 'LCP', 'FCP', 'FID', 'INP', 'TTFB'],
+    nextScriptWorkers: true,
   },
 };
 

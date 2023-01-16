@@ -49,15 +49,12 @@ export default class Document extends NextDocument {
           <title>Signature Mídia - A sua assinatura no digital</title>
           {/* 👇 Here's the script */}
           {/* LEADSTER - START*/}
-          <Script
-            id="neurolead"
-            strategy="lazyOnload"
+          <script
+            id="inline-script"
             dangerouslySetInnerHTML={{
-              __html: `
-          (function(n,r,l,d){try{var h=r.head||r.getElementsByTagName("head")[0],s=r.createElement("script");s.defer=true;s.setAttribute("type","text/javascript");s.setAttribute("src",l);n.neuroleadId=d;h.appendChild(s);}catch(e){}})(window,document,"https://cdn.leadster.com.br/neurolead/neurolead.min.js", 72246);
-          `,
+              __html: `(function(n,r,l,d){try{var h=r.head||r.getElementsByTagName("head")[0],s=r.createElement("script");s.defer=true;s.setAttribute("type","text/javascript");s.setAttribute("src",l);n.neuroleadId=d;h.appendChild(s);}catch(e){}})(window,document,"https://cdn.leadster.com.br/neurolead/neurolead.min.js", 72246);`,
             }}
-          />
+          ></script>
           {/* LEADSTER - END */}
           {/* GOOGLE TAG MANAGER - START */}
           {/* <noscript>
