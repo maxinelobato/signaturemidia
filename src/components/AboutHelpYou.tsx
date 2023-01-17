@@ -7,21 +7,15 @@ import {
   Heading,
   Text,
   SimpleGrid,
-  StatLabel,
   VStack,
-  Stat,
   Center,
-  Divider,
+  Highlight,
+  HStack,
 } from '@chakra-ui/react';
-import {
-  Lightbulb,
-  NumberCircleFour,
-  NumberCircleOne,
-  NumberCircleThree,
-  NumberCircleTwo,
-} from 'phosphor-react';
+import { CaretLeft, CaretRight, Lightbulb } from 'phosphor-react';
 
 export function AboutHelpYou() {
+  const LightSpeed = require('react-reveal/LightSpeed');
   return (
     <>
       <Box
@@ -75,14 +69,14 @@ export function AboutHelpYou() {
             </Stack>
             <Center>
               <Container maxW={'2xl'}>
-                <Stack textAlign={'center'}>
+                <Stack textAlign={'center'} pb={12}>
                   <SimpleGrid columns={{ base: 1, md: 1 }} spacing={{ base: 5, lg: 5 }}>
-                    <Stat
-                      px={{ base: 5, md: 4 }}
+                    <Box
+                      px={{ base: 1, md: 1 }}
                       py={5}
                       backdropFilter="auto"
                       backdropBlur="1rem"
-                      bgColor="whiteAlpha.50"
+                      bgColor="blackAlpha.500"
                       shadow="xl"
                       border="1px solid"
                       borderColor="whiteAlpha.200"
@@ -92,57 +86,131 @@ export function AboutHelpYou() {
                         justifyContent={{ base: 'center', md: 'center' }}
                         direction={{ base: 'column-reverse', md: 'column' }}
                       >
-                        <Box>
-                          <Stack direction={{ base: 'column', md: 'row' }}>
-                            <VStack>
-                              <Box color="orange.400" my="auto">
-                                {/* <NumberCircleOne size={'4em'} weight="duotone" /> */}
-                                <Stack direction="row" h="100px" p={4}>
-                                  <Center height="50px">
-                                    <Divider orientation="vertical" variant="thick" />
-                                  </Center>
-                                </Stack>
+                        <Container maxW={'6xl'}>
+                          {/* TEXTO 1 */}
+                          <LightSpeed left cascade>
+                            <HStack align={'center'} py={5}>
+                              <Box color={'orange.400'} px={2}>
+                                <CaretRight size={'4em'} weight="fill" />
                               </Box>
-                            </VStack>
-                            <Box color="whiteAlpha.800" p={2}>
-                              <StatLabel
-                                fontSize={['sm', 'md', 'lg']}
-                                fontWeight={'normal'}
-                                textAlign={{ base: 'center', md: 'left' }}
-                              >
-                                Caso a resposta seja NÃO, nós da Signature Mídia iremos
-                                te mostrar como os nossos clientes alcançam mais
-                                clientes todos os meses
-                              </StatLabel>
-                            </Box>
-                          </Stack>
-                        </Box>
+                              <VStack align={'start'}>
+                                <Text
+                                  fontSize={['sm', 'md', 'lg']}
+                                  fontWeight={'normal'}
+                                  textAlign={{ base: 'center', md: 'left' }}
+                                >
+                                  <Highlight
+                                    query={['NÃO', 'Signature Mídia']}
+                                    styles={{
+                                      py: '1',
+                                      fontWeight: 'bold',
+                                      color: 'orange.400',
+                                    }}
+                                  >
+                                    Caso a resposta seja não, nós da Signature Mídia
+                                    iremos te mostrar como os nossos clientes alcançam
+                                    mais clientes todos os meses
+                                  </Highlight>
+                                </Text>
+                              </VStack>
+                            </HStack>
+
+                            {/* TEXTO 2 */}
+
+                            <HStack align={'center'} py={5}>
+                              <Box color={'orange.400'} px={2}>
+                                <CaretRight size={'4em'} weight="fill" />
+                              </Box>
+                              <VStack align={'start'}>
+                                <Text
+                                  fontSize={['sm', 'md', 'lg']}
+                                  fontWeight={'normal'}
+                                  textAlign={{ base: 'center', md: 'left' }}
+                                >
+                                  <Highlight
+                                    query={[
+                                      'missão',
+                                      'reconhecimento',
+                                      'posicionamento',
+                                      'e escala',
+                                    ]}
+                                    styles={{
+                                      py: '1',
+                                      fontWeight: 'bold',
+                                      color: 'orange.400',
+                                    }}
+                                  >
+                                    A nossa missão é fazer você ter mais reconhecimento,
+                                    posicionamento e escala para ter clientes
+                                    qualificados fechando contratos com você
+                                  </Highlight>
+                                </Text>
+                              </VStack>
+                            </HStack>
+
+                            {/* TEXTO 3 */}
+
+                            <HStack align={'center'} py={5}>
+                              <Box color={'orange.400'} px={2}>
+                                <CaretRight size={'4em'} weight="fill" />
+                              </Box>
+                              <VStack align={'start'}>
+                                <Text
+                                  fontSize={['sm', 'md', 'lg']}
+                                  fontWeight={'normal'}
+                                  textAlign={{ base: 'center', md: 'left' }}
+                                >
+                                  <Highlight
+                                    query={['Esqueça', 'seguidores', 'não', 'paga']}
+                                    styles={{
+                                      py: '1',
+                                      fontWeight: 'bold',
+                                      color: 'orange.400',
+                                    }}
+                                  >
+                                    Esqueça a compra de seguidores, isso não paga suas
+                                    contas
+                                  </Highlight>
+                                </Text>
+                              </VStack>
+                            </HStack>
+
+                            {/* TEXTO 4 */}
+
+                            <HStack align={'center'} py={5}>
+                              <Box color={'orange.400'} px={2}>
+                                <CaretRight size={'4em'} weight="fill" />
+                              </Box>
+                              <VStack align={'start'}>
+                                <Text
+                                  fontSize={['sm', 'md', 'lg']}
+                                  fontWeight={'normal'}
+                                  textAlign={{ base: 'center', md: 'left' }}
+                                >
+                                  <Highlight
+                                    query={[
+                                      'oportunidade',
+                                      'transformar',
+                                      'negócio',
+                                      'sólido',
+                                    ]}
+                                    styles={{
+                                      py: '1',
+                                      fontWeight: 'bold',
+                                      color: 'orange.400',
+                                    }}
+                                  >
+                                    Aproveite a oportunidade de transformar o seu
+                                    negócio para que ele seja sólido e recorrente na
+                                    internet
+                                  </Highlight>
+                                </Text>
+                              </VStack>
+                            </HStack>
+                          </LightSpeed>
+                        </Container>
                       </Flex>
-                    </Stat>
-                    {/* <StatsCard
-                      title={
-                        'Caso a resposta seja NÃO, nós da Signature Mídia iremos te mostrar como os nossos clientes alcançam mais clientes todos os meses'
-                      }
-                      icon={<NumberCircleOne size={'4em'} weight="duotone" />}
-                    />
-                    <StatsCard
-                      title={
-                        'A nossa missão é fazer você ter mais reconhecimento, posicionamento e escala para ter clientes qualificados fechando contratos com você'
-                      }
-                      icon={<NumberCircleTwo size={'4em'} weight="duotone" />}
-                    />
-                    <StatsCard
-                      title={
-                        'Esqueça a compra de seguidores, isso NÃO PAGA suas contas'
-                      }
-                      icon={<NumberCircleThree size={'4em'} weight="duotone" />}
-                    />
-                    <StatsCard
-                      title={
-                        'Ter a oportunidade de transformar o seu negócio, para que ele seja sólido na internet, trazendo solidez e recorrência'
-                      }
-                      icon={<NumberCircleFour size={'4em'} weight="duotone" />}
-                    /> */}
+                    </Box>
                   </SimpleGrid>
                 </Stack>
               </Container>
