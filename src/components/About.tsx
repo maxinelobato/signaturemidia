@@ -10,20 +10,19 @@ import {
   Image as NextImage,
   Link,
   IconButton,
-  useColorModeValue,
 } from '@chakra-ui/react';
 import { Play } from 'phosphor-react';
-import { useEffect, useState } from 'react';
+// import { useEffect, useState } from 'react';
 // import ReactPlayer from 'react-player';
 import { ButtonPLAY } from './ButtonPLAY';
 import { ButtonWTP } from './ButtonWTP';
-import Player from './VideoPlayer/Player';
+// import Player from './VideoPlayer/Player';
 
 export function About() {
-  const [isSSR, setIsSSR] = useState(true);
-  useEffect(() => {
-    setIsSSR(false);
-  }, []);
+  // const [isSSR, setIsSSR] = useState(true);
+  // useEffect(() => {
+  //   setIsSSR(false);
+  // }, []);
 
   return (
     <Box bgGradient="linear(to-t, blackAlpha.900, rgba(193, 94, 3, 0.5) 150% )">
@@ -78,52 +77,52 @@ export function About() {
               left={0}
               color="whiteAlpha.800"
             />
-            {isSSR ? null : (
-              <Box
-                zIndex={2}
-                overflow="hidden"
-                h="35rem"
-                maxW="100%"
-                rounded="lg"
-                boxShadow="0 4px 8px 0 rgba(255, 255, 255, 0.8), 0 2px 20px 0 rgba(255, 255, 255, 0.8);"
-              >
-                {/* <ReactPlayer
+            {/* {isSSR ? null : ( */}
+            <Box
+              zIndex={2}
+              overflow="hidden"
+              h="35rem"
+              maxW="100%"
+              rounded="lg"
+              boxShadow="0 4px 8px 0 rgba(255, 255, 255, 0.8), 0 2px 20px 0 rgba(255, 255, 255, 0.8);"
+            >
+              {/* <ReactPlayer
                   width="auto"
                   height="35rem"
                   url="/video/humberto.mp4"
                   controls
                 />
               <Player src="/video/humberto.mp4" /> */}
-                <IconButton
-                  as={Link}
-                  aria-label={'Play Button'}
-                  variant="solid"
-                  bgColor="blackAlpha.900"
-                  _hover={{
-                    bgColor: 'orange.400',
-                    transition: '0.4s',
-                  }}
-                  icon={<Play size={24} weight="fill" />}
-                  size={'lg'}
-                  color={'white'}
-                  position={'absolute'}
-                  left={'50%'}
-                  top={'50%'}
-                  transform={'translateX(-50%) translateY(-50%)'}
-                  href="https://www.instagram.com/p/CkRnSKVJf4Y/"
-                  isExternal
-                />
+              <IconButton
+                as={Link}
+                aria-label={'Play Button'}
+                variant="solid"
+                bgColor="blackAlpha.900"
+                _hover={{
+                  bgColor: 'orange.400',
+                  transition: '0.4s',
+                }}
+                icon={<Play size={24} weight="fill" />}
+                size={'lg'}
+                color={'white'}
+                position={'absolute'}
+                left={'50%'}
+                top={'50%'}
+                transform={'translateX(-50%) translateY(-50%)'}
+                href="https://www.instagram.com/p/CkRnSKVJf4Y/"
+                isExternal
+              />
 
-                <NextImage
-                  loading="lazy"
-                  h="35rem"
-                  maxW="100%"
-                  alt="..."
-                  objectFit="cover"
-                  src="/img/livehumberto.jpg"
-                />
-              </Box>
-            )}
+              <NextImage
+                loading="lazy"
+                h="35rem"
+                maxW="100%"
+                alt="..."
+                objectFit="cover"
+                src="/img/livehumberto.jpg"
+              />
+            </Box>
+            {/* )} */}
           </Flex>
         </Stack>
       </Container>
