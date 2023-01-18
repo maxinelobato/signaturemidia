@@ -52,18 +52,18 @@ export function HowSigHelpYou() {
             </Box>
           </VStack>
           <Heading
-            color="whiteAlpha.800"
-            fontSize={{ base: 'lg', md: '2xl', lg: '3xl' }}
+            fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }}
             textAlign={{ base: 'center', md: 'center', lg: 'center' }}
-            maxW="3xl"
           >
-            Nossa missão é ajudar pequenas e médias empresas a se posicionarem e
-            venderem mais através das mídias sociais.
-            <Text>
+            <Text color="orange.300" textShadow="#000 1px 1px">
+              Nossa missão é ajudar pequenas e médias empresas a se posicionarem e
+              venderem mais através das mídias sociais.
+            </Text>{' '}
+            <Text color="whiteAlpha.800" as="span" textShadow="#000 1px 1px">
               Fazemos isso para que você possa enxergar a oportunidade de negócio em
               anúncios pagos no Google e Instagram, seja para atrair mais clientes ou se
               posicionar melhor, construindo sua autoridade.
-            </Text>
+            </Text>{' '}
           </Heading>
           <Box
             p={4}

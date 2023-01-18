@@ -15,12 +15,7 @@ import { GoogleLogo, InstagramLogo } from 'phosphor-react';
 
 export function Footer() {
   return (
-    <Box
-      bgColor="blackAlpha.700"
-      shadow="base"
-      borderTop="1px"
-      borderColor="rgba(193, 94, 3, 0.5)"
-    >
+    <Box bgGradient="linear(to-l, #dd6b20, orange.400)" shadow="base">
       <Stack
         direction={{
           base: 'column',
@@ -35,7 +30,7 @@ export function Footer() {
             src="/ico/apple-touch-icon.png"
             alt="Signature Mídia"
             rounded="lg"
-            css={{ filter: 'drop-shadow(0 0 1rem rgba(193, 94, 3, 0.4))' }}
+            style={{ filter: 'drop-shadow(0 0 0.5rem rgba(0, 0, 0, 10))' }}
             width={{
               base: '4rem',
               lg: '4rem',
@@ -51,14 +46,14 @@ export function Footer() {
         <Stack justify="center" direction={{ base: 'column', md: 'row' }}>
           <Button
             as={Link}
-            bgGradient="linear(to-r, orange.400, orange.200)"
-            color="blackAlpha.900"
+            bgGradient="linear(to-r, blackAlpha.900, blackAlpha.800)"
+            color="whiteAlpha.900"
             w="full"
             rounded="lg"
             style={{ textDecoration: 'none' }}
             _hover={{
-              color: 'blackAlpha.800',
-              transition: '0.5s',
+              color: 'orange.400',
+              transition: '1.1s',
             }}
             leftIcon={<InstagramLogo size={32} weight="fill" />}
             href="https://www.instagram.com/signature.midia/"
@@ -68,14 +63,14 @@ export function Footer() {
           </Button>
           <Button
             as={Link}
-            bgGradient="linear(to-r, orange.400, orange.200)"
-            color="blackAlpha.900"
+            bgGradient="linear(to-r, blackAlpha.900, blackAlpha.800)"
+            color="whiteAlpha.900"
             w="full"
             rounded="lg"
             style={{ textDecoration: 'none' }}
             _hover={{
-              color: 'blackAlpha.800',
-              transition: '0.5s',
+              color: 'orange.400',
+              transition: '1.1s',
             }}
             leftIcon={<GoogleLogo size={32} weight="fill" />}
             href="https://www.instagram.com/signature.midia/"
@@ -86,7 +81,12 @@ export function Footer() {
         </Stack>
         <VStack>
           <HStack justify="center" mt={10} pb={4}>
-            <Text textAlign="center" fontSize="smaller">
+            <Text
+              textAlign="center"
+              fontSize="smaller"
+              color="blackAlpha.700"
+              fontWeight="bold"
+            >
               &copy;Signature Mídia | 2023. Todos os Direitos Reservados.
             </Text>
           </HStack>

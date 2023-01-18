@@ -13,6 +13,7 @@ import {
   HStack,
 } from '@chakra-ui/react';
 import { CaretLeft, CaretRight, Lightbulb } from 'phosphor-react';
+import { ButtonWTP } from './ButtonWTP';
 
 export function AboutHelpYou() {
   const LightSpeed = require('react-reveal/LightSpeed');
@@ -208,6 +209,7 @@ export function AboutHelpYou() {
                               </VStack>
                             </HStack>
                           </LightSpeed>
+                          <ButtonWTP />
                         </Container>
                       </Flex>
                     </Box>

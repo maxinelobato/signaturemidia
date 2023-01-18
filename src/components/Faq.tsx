@@ -7,6 +7,7 @@ import {
   Box,
   Container,
   Flex,
+  Heading,
   Icon,
   SimpleGrid,
   Stack,
@@ -37,8 +38,8 @@ const Feature = ({ text, icon }: FeatureProps) => {
 export function Faq() {
   return (
     <Box bgGradient="linear(to-t, rgba(193, 94, 3, 0.5), blackAlpha.700 80%)">
-      <Container maxW={'6xl'} py={16} as={Stack} spacing={12}>
-        <VStack spacing={4}>
+      <Container maxW="5xl" py={6} as={Stack} spacing={12}>
+        <VStack spacing={6}>
           <Box
             backdropFilter="auto"
             backdropBlur="1rem"
@@ -64,7 +65,15 @@ export function Faq() {
             </Box>
           </Box>
         </VStack>
-
+        <Heading
+          fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }}
+          textAlign={{ base: 'center', md: 'center', lg: 'center' }}
+        >
+          <Text color="whiteAlpha.800">Dúvidas frequentes sobre o nosso trabalho</Text>{' '}
+          <Text color="orange.300" textShadow="#000 1px 1px">
+            Você também pode falar diretamente com nossos especialistas
+          </Text>{' '}
+        </Heading>
         <SimpleGrid columns={{ base: 1, md: 1 }} spacing={{ base: 1, lg: 6 }}>
           <Container maxW={'5xl'}>
             <Box position="relative">
