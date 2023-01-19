@@ -46,6 +46,7 @@ export function Footer() {
         <Stack justify="center" direction={{ base: 'column', md: 'row' }}>
           <Button
             as={Link}
+            shadow="dark-lg"
             bgGradient="linear(to-r, blackAlpha.900, blackAlpha.800)"
             color="whiteAlpha.900"
             w="full"
@@ -63,6 +64,7 @@ export function Footer() {
           </Button>
           <Button
             as={Link}
+            shadow="dark-lg"
             bgGradient="linear(to-r, blackAlpha.900, blackAlpha.800)"
             color="whiteAlpha.900"
             w="full"
@@ -73,7 +75,7 @@ export function Footer() {
               transition: '1.1s',
             }}
             leftIcon={<GoogleLogo size={32} weight="fill" />}
-            href="https://www.instagram.com/signature.midia/"
+            href="https://g.page/r/CafZRYsKoFPhEAg/review"
             isExternal
           >
             Veja nossos Feedbacks

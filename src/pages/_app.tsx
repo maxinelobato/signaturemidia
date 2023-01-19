@@ -2,6 +2,7 @@ import { ChakraProvider, extendTheme, ThemeConfig } from '@chakra-ui/react';
 import type { AppProps, NextWebVitalsMetric } from 'next/app';
 import { accordionTheme } from '../components/theme/Accordion';
 import { dividerTheme } from '../components/theme/Divider';
+import './styles.css';
 // import { ScrollWhatsApp } from '../components/ScrollWhatsApp';
 // import GAnalytics from '../components/Analytics/GAnalytics';
 // import GTag from '../components/Analytics/GTag';

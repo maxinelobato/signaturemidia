@@ -7,10 +7,22 @@ import {
   Stack,
   Text,
   VStack,
+  Image as NextImage,
 } from '@chakra-ui/react';
 import { Handshake } from 'phosphor-react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { EffectCards, Pagination } from 'swiper';
+import { useEffect } from 'react';
 
 export function HowSigHelpYou() {
+  // useEffect(() => {
+  //   const stylesheet = document.styleSheets[0];
+  //   stylesheet.insertRule(
+  //     '.swiper-pagination-bullet-active { background: #dd6b20 !important;}',
+  //     0
+  //   );
+  // }, []);
+
   return (
     <Box bgGradient="linear(to-t, rgba(193, 94, 3, 0.5), blackAlpha.700 80%)">
       <Container maxW={'5xl'}>
@@ -113,6 +125,65 @@ export function HowSigHelpYou() {
           </Box>
         </Stack>
       </Container>
+      <VStack align="center" direction="column">
+        <Container maxW="5xl" pb={8} pt={8}>
+          <Heading
+            fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }}
+            textAlign={{ base: 'center', md: 'center', lg: 'center' }}
+          >
+            <Text color="whiteAlpha.800" textShadow="#000 1px 1px">
+              Veja algumas dos nossos projetos de
+            </Text>{' '}
+            <Text color="orange.300" textShadow="#000 1px 1px" as="span">
+              Landing Pages e Sites Institucionais aprovados pelos nossos clientes
+            </Text>{' '}
+          </Heading>
+        </Container>
+        <Box
+          rounded="lg"
+          boxSize={{ base: '21em', md: '3xl' }}
+          overflow="hidden"
+          boxShadow="dark-lg"
+          flex={1}
+        >
+          <Swiper
+            effect={'cards'}
+            grabCursor={true}
+            slidesPerView={'auto'}
+            spaceBetween={30}
+            pagination={{
+              clickable: true,
+            }}
+            modules={[Pagination, EffectCards]}
+          >
+            <SwiperSlide>
+              <Box rounded="lg" boxSize={{ base: 'xs', md: '2xl' }}>
+                <NextImage sizes="auto" rounded="lg" src="/img/jessicalp.jpg" />
+              </Box>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Box rounded="lg" boxSize={{ base: 'xs', md: '2xl' }}>
+                <NextImage sizes="auto" rounded="lg" src="/img/mayanalp.jpg" />
+              </Box>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Box rounded="lg" boxSize={{ base: 'xs', md: '2xl' }}>
+                <NextImage sizes="auto" rounded="lg" src="/img/humbertolp.jpg" />
+              </Box>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Box rounded="lg" boxSize={{ base: 'xs', md: '2xl' }}>
+                <NextImage sizes="auto" rounded="lg" src="/img/gustavolp.jpg" />
+              </Box>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Box rounded="lg" boxSize={{ base: 'xs', md: '2xl' }}>
+                <NextImage sizes="auto" rounded="lg" src="/img/contadorlp.jpg" />
+              </Box>
+            </SwiperSlide>
+          </Swiper>
+        </Box>
+      </VStack>
     </Box>
   );
 }
