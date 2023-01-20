@@ -79,7 +79,7 @@ export function About() {
             />
             {/* {isSSR ? null : ( */}
             <Box
-              zIndex={2}
+              zIndex={1}
               overflow="hidden"
               h="35rem"
               maxW="100%"
