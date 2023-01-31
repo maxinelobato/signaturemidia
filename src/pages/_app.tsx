@@ -25,7 +25,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <ChakraProvider theme={theme} resetCSS>
       {/* <GTag /> */}
       {/* <GAnalytics /> */}
-      <ScrollWhatsApp />
+      {/* <ScrollWhatsApp /> */}
       <Component {...pageProps} />
     </ChakraProvider>
   );

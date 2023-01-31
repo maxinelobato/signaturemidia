@@ -58,14 +58,6 @@ export default class Document extends NextDocument {
             }}
           /> */}
           {/* Global Site Tag (gtag.js) - Google Analytics - END */}
-          {/* CRISP - START*/}
-          <script
-            id="inline-script"
-            dangerouslySetInnerHTML={{
-              __html: `(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);`,
-            }}
-          ></script>
-          {/* CRISP - END */}
         </Head>
         <body>
           <title>Signature Mídia - A sua assinatura no digital</title>
@@ -78,6 +70,22 @@ export default class Document extends NextDocument {
             }}
           ></script> */}
           {/* LEADSTER - END */}
+          {/* TAWK.TO - START*/}
+          <script
+            id="inline-script"
+            dangerouslySetInnerHTML={{
+              __html: `var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+              (function(){
+              var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+              s1.async=true;
+              s1.src='https://embed.tawk.to/63d9557fc2f1ac1e2030a18f/1go4fbuld';
+              s1.charset='UTF-8';
+              s1.setAttribute('crossorigin','*');
+              s0.parentNode.insertBefore(s1,s0);
+              })();`,
+            }}
+          ></script>
+          {/* TAWK.TO - END */}
           {/* GOOGLE TAG MANAGER - START */}
           {/* <noscript>
             <iframe
