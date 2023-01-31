@@ -3,62 +3,47 @@ import {
   Avatar,
   Box,
   Button,
-  Center,
   Container,
   Heading,
   Link,
   SimpleGrid,
   Stack,
   Text,
-  useColorModeValue,
   VStack,
 } from '@chakra-ui/react';
 import { UsersThree } from 'phosphor-react';
 
-export function TeamSig() {
+export function MeetSignature() {
   return (
     <Box bgGradient="linear(to-b, rgba(193, 94, 3, 0.5), blackAlpha.700 80%)">
       <Container maxW={'6xl'} py={16} as={Stack} spacing={12}>
-        <VStack spacing={4}>
-          <Box
-            backdropFilter="auto"
-            backdropBlur="1rem"
-            bgColor="whiteAlpha.50"
-            shadow="xl"
-            border="1px solid"
-            borderColor="whiteAlpha.200"
-            rounded="lg"
-            alignItems="center"
-            display="flex"
-            mt="2"
-            p={5}
+        <Stack textAlign={'center'} align={'center'}>
+          <Heading
+            fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }}
+            textAlign={{ base: 'center', md: 'center', lg: 'center' }}
           >
-            <UsersThree size={36} weight="fill" />
-            <Box
-              ml="2"
-              color="whiteAlpha.800"
-              fontSize="lg"
-              textAlign="center"
-              fontWeight="bold"
-            >
-              Conheça a Signature Mídia
-            </Box>
-          </Box>
-        </VStack>
+            <Text color="whiteAlpha.800">Conheça a</Text>{' '}
+            <Text color="orange.300" as="span" textShadow="#000 1px 1px">
+              <i>Signature Midia</i>
+            </Text>{' '}
+          </Heading>
+        </Stack>
         <Heading
           fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }}
           textAlign={{ base: 'center', md: 'center', lg: 'center' }}
         >
           <Text color="whiteAlpha.800">
-            Mais que um time, uma família unida por um único propósito que não foi
-            ensinado para nós nas escolas e nas faculdades.
+            A Signature Midia é especializada em ajudar as empresas a alcançar seus
+            objetivos de negócios através da utilização de estratégias e técnicas
+            avançadas de marketing digital.
           </Text>{' '}
           <Text color="orange.300" as="span" textShadow="#000 1px 1px">
-            Ajudar a todos os profissionais autonomos a conseguir mais clientes através
-            do Marketing Digital
+            Com uma equipe altamente capacitada e experiente, oferece soluções
+            personalizadas e eficazes para aumentar a visibilidade online, atrair e
+            reter clientes e impulsionar o crescimento do negócio.
           </Text>{' '}
         </Heading>
-        <SimpleGrid columns={{ base: 1, md: 4 }} spacing={{ base: 4, md: 6 }}>
+        {/* <SimpleGrid columns={{ base: 1, md: 4 }} spacing={{ base: 4, md: 6 }}>
           <Box
             maxW={'320px'}
             w={'full'}
@@ -255,7 +240,7 @@ export function TeamSig() {
               </Button>
             </Stack>
           </Box>
-        </SimpleGrid>
+        </SimpleGrid> */}
       </Container>
     </Box>
   );

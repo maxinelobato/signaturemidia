@@ -99,37 +99,11 @@ const ReviewsGoogle = {
   rating: 5,
 };
 
-export function WithSpeechBubbles() {
+export function GoogleReviews() {
   return (
     <Box bgImage="/img/googlereviews.svg" h="auto" bgSize="cover" bgRepeat="no-repeat">
       <Box bgGradient="linear(to-b, rgba(193, 94, 3, 0.5), blackAlpha.700 80%)">
         <Container maxW={'6xl'} py={16} as={Stack} spacing={12}>
-          <VStack spacing={4}>
-            <Box
-              backdropFilter="auto"
-              backdropBlur="1rem"
-              bgColor="whiteAlpha.50"
-              shadow="xl"
-              border="1px solid"
-              borderColor="whiteAlpha.200"
-              rounded="lg"
-              alignItems="center"
-              display="flex"
-              mt="2"
-              p={5}
-            >
-              <Heart size={36} weight="fill" />
-              <Box
-                ml="2"
-                color="whiteAlpha.800"
-                fontSize="lg"
-                textAlign="center"
-                fontWeight="bold"
-              >
-                Nossos Clientes
-              </Box>
-            </Box>
-          </VStack>
           <Stack spacing={0} align={'center'}>
             <Heading
               fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }}

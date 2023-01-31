@@ -3,7 +3,7 @@ import type { AppProps, NextWebVitalsMetric } from 'next/app';
 import { accordionTheme } from '../components/theme/Accordion';
 import { dividerTheme } from '../components/theme/Divider';
 import './styles.css';
-// import { ScrollWhatsApp } from '../components/ScrollWhatsApp';
+import { ScrollWhatsApp } from '../components/ScrollWhatsApp';
 // import GAnalytics from '../components/Analytics/GAnalytics';
 // import GTag from '../components/Analytics/GTag';
 
@@ -24,8 +24,8 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider theme={theme} resetCSS>
       {/* <GTag /> */}
-      {/* <ScrollWhatsApp /> */}
       {/* <GAnalytics /> */}
+      <ScrollWhatsApp />
       <Component {...pageProps} />
     </ChakraProvider>
   );

@@ -1,17 +1,5 @@
-import {
-  Box,
-  Button,
-  Center,
-  Divider,
-  Flex,
-  HStack,
-  Image,
-  Link,
-  Stack,
-  Text,
-  VStack,
-} from '@chakra-ui/react';
-import { GoogleLogo, InstagramLogo } from 'phosphor-react';
+import { Box, Flex, HStack, Image, Stack, Text, VStack } from '@chakra-ui/react';
+import { InstagramLogo } from 'phosphor-react';
 
 export function Footer() {
   return (
@@ -43,44 +31,34 @@ export function Footer() {
         </Flex>
       </Stack>
       <VStack py={2}>
-        <Stack justify="center" direction={{ base: 'column', md: 'row' }}>
-          <Button
-            as={Link}
-            shadow="dark-lg"
-            bgGradient="linear(to-r, blackAlpha.900, blackAlpha.800)"
-            color="whiteAlpha.900"
-            w="full"
-            rounded="lg"
-            style={{ textDecoration: 'none' }}
-            _hover={{
-              color: 'orange.400',
-              transition: '1.1s',
-            }}
-            leftIcon={<InstagramLogo size={32} weight="fill" />}
-            href="https://www.instagram.com/signature.midia/"
-            isExternal
-          >
-            Siga o nosso Instagram
-          </Button>
-          <Button
-            as={Link}
-            shadow="dark-lg"
-            bgGradient="linear(to-r, blackAlpha.900, blackAlpha.800)"
-            color="whiteAlpha.900"
-            w="full"
-            rounded="lg"
-            style={{ textDecoration: 'none' }}
-            _hover={{
-              color: 'orange.400',
-              transition: '1.1s',
-            }}
-            leftIcon={<GoogleLogo size={32} weight="fill" />}
-            href="https://g.page/r/CafZRYsKoFPhEAg/review"
-            isExternal
-          >
-            Veja nossos Feedbacks
-          </Button>
-        </Stack>
+        <Box
+          p={4}
+          backdropFilter="auto"
+          backdropBlur="1rem"
+          bgColor="blackAlpha.200"
+          boxShadow="lg"
+          border="1px solid"
+          borderColor="whiteAlpha.200"
+          rounded="lg"
+        >
+          <VStack>
+            <Stack justify="center">
+              <Box display="flex" mt="2" alignItems="center">
+                <Box color="blackAlpha.700">Siga o nosso Instagram</Box>
+              </Box>
+            </Stack>
+            <Stack justify="center">
+              <Box display="flex" mt="2" alignItems="center">
+                <Box color="blackAlpha.700">
+                  <InstagramLogo size={32} weight="fill" />
+                </Box>
+                <Text as="span" color="blackAlpha.700">
+                  @signature.midia
+                </Text>
+              </Box>
+            </Stack>
+          </VStack>
+        </Box>
         <VStack>
           <HStack justify="center" mt={10} pb={4}>
             <Text

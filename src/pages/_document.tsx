@@ -58,17 +58,25 @@ export default class Document extends NextDocument {
             }}
           /> */}
           {/* Global Site Tag (gtag.js) - Google Analytics - END */}
+          {/* CRISP - START*/}
+          <script
+            id="inline-script"
+            dangerouslySetInnerHTML={{
+              __html: `(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);`,
+            }}
+          ></script>
+          {/* CRISP - END */}
         </Head>
         <body>
           <title>Signature Mídia - A sua assinatura no digital</title>
           {/* 👇 Here's the script */}
           {/* LEADSTER - START*/}
-          <script
+          {/* <script
             id="inline-script"
             dangerouslySetInnerHTML={{
               __html: `(function(n,r,l,d){try{var h=r.head||r.getElementsByTagName("head")[0],s=r.createElement("script");s.defer=true;s.setAttribute("type","text/javascript");s.setAttribute("src",l);n.neuroleadId=d;h.appendChild(s);}catch(e){}})(window,document,"https://cdn.leadster.com.br/neurolead/neurolead.min.js", 72246);`,
             }}
-          ></script>
+          ></script> */}
           {/* LEADSTER - END */}
           {/* GOOGLE TAG MANAGER - START */}
           {/* <noscript>

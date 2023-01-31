@@ -39,37 +39,13 @@ export function Faq() {
   return (
     <Box bgGradient="linear(to-t, rgba(193, 94, 3, 0.5), blackAlpha.700 80%)">
       <Container maxW="5xl" py={6} as={Stack} spacing={12}>
-        <VStack spacing={6}>
-          <Box
-            backdropFilter="auto"
-            backdropBlur="1rem"
-            bgColor="whiteAlpha.50"
-            shadow="xl"
-            border="1px solid"
-            borderColor="whiteAlpha.200"
-            rounded="lg"
-            alignItems="center"
-            display="flex"
-            mt="2"
-            p={5}
-          >
-            <Info size={36} weight="fill" />
-            <Box
-              ml="2"
-              color="whiteAlpha.800"
-              fontSize="lg"
-              textAlign="center"
-              fontWeight="bold"
-            >
-              Informações Importantes
-            </Box>
-          </Box>
-        </VStack>
         <Heading
           fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }}
           textAlign={{ base: 'center', md: 'center', lg: 'center' }}
         >
-          <Text color="whiteAlpha.800">Dúvidas frequentes sobre o nosso trabalho</Text>{' '}
+          <Text color="whiteAlpha.800">
+            Informações e Dúvidas frequentes sobre o nosso trabalho
+          </Text>{' '}
           <Text color="orange.300" textShadow="#000 1px 1px">
             Você também pode falar diretamente com nossos especialistas
           </Text>{' '}
@@ -110,40 +86,6 @@ export function Faq() {
                         específico tudo irá depender de variáveis como concorrência,
                         qualidade, recorrência e autoridade, ou seja, se é um produto
                         conhecido no mercado.
-                      </Text>
-                    </Box>
-                  </AccordionPanel>
-                </AccordionItem>
-
-                <AccordionItem mt={4}>
-                  <h2>
-                    <AccordionButton>
-                      <Box flex="1" textAlign="center">
-                        <Stack spacing={2}>
-                          <Feature
-                            icon={
-                              <Icon
-                                as={ArrowSquareDownRight}
-                                w={12}
-                                h={12}
-                                weight="fill"
-                              />
-                            }
-                            text={'Preciso assinar contrato?'}
-                          />
-                        </Stack>
-                      </Box>
-                      <AccordionIcon />
-                    </AccordionButton>
-                  </h2>
-                  <AccordionPanel pb={4}>
-                    <Box>
-                      <Text pt="2">
-                        Nós fazemos contrato se você quiser, mas não temos nenhuma
-                        cláusula de obrigatoriedade para com o cliente e vice versa. Nós
-                        deixamos o cliente livre para ir e vir, caso seja para pessoa
-                        jurídica nós iremos conversar com os responsáveis para chegarmos
-                        a um senso comum e ver a possibilidade de um contrato.
                       </Text>
                     </Box>
                   </AccordionPanel>

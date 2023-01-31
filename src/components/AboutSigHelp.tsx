@@ -12,10 +12,10 @@ import {
   Highlight,
   HStack,
 } from '@chakra-ui/react';
-import { CaretLeft, CaretRight, Lightbulb } from 'phosphor-react';
+import { CaretRight } from 'phosphor-react';
 import { ButtonWTP } from './ButtonWTP';
 
-export function AboutHelpYou() {
+export function AboutSigHelp() {
   const LightSpeed = require('react-reveal/LightSpeed');
   return (
     <>
@@ -30,34 +30,8 @@ export function AboutHelpYou() {
         _loading={{ _loading: 'lazy' }}
       >
         <Box bgGradient="linear(to-b, blackAlpha.900, rgba(193, 94, 3, 0.5) 150%)">
-          <Container maxW={'7xl'}>
-            <VStack spacing={4}>
-              <Box
-                backdropFilter="auto"
-                backdropBlur="1rem"
-                bgColor="whiteAlpha.50"
-                shadow="xl"
-                border="1px solid"
-                borderColor="whiteAlpha.200"
-                rounded="lg"
-                alignItems="center"
-                display="flex"
-                mt="2"
-                p={5}
-              >
-                <Lightbulb size={36} weight="fill" />
-                <Box
-                  ml="2"
-                  color="whiteAlpha.800"
-                  fontSize="lg"
-                  textAlign="center"
-                  fontWeight="bold"
-                >
-                  Nossa Solução
-                </Box>
-              </Box>
-            </VStack>
-            <Stack textAlign={'center'} align={'center'} py={{ base: 12, md: 16 }}>
+          <Container maxW={'2xl'}>
+            <Stack textAlign={'center'} align={'center'} py={12}>
               <Heading
                 fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }}
                 textAlign={{ base: 'center', md: 'center', lg: 'center' }}
@@ -209,10 +183,12 @@ export function AboutHelpYou() {
                               </VStack>
                             </HStack>
                           </LightSpeed>
-                          <ButtonWTP />
                         </Container>
                       </Flex>
                     </Box>
+                    <Center>
+                      <ButtonWTP />
+                    </Center>
                   </SimpleGrid>
                 </Stack>
               </Container>

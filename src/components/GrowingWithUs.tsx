@@ -4,7 +4,6 @@ import {
   Container,
   Flex,
   Heading,
-  HStack,
   Icon,
   Link,
   SimpleGrid,
@@ -18,54 +17,27 @@ import {
   Heart,
   PresentationChart,
   RocketLaunch,
-  Star,
   UsersThree,
 } from 'phosphor-react';
 
-export function Notice() {
+export function GrowingWithUs() {
   return (
     <Box bgGradient="linear(to-b, blackAlpha.900, blackAlpha.600 150%)">
       <Container maxW={'5xl'}>
         <Stack
-          py={8}
-          px={8}
+          py={28}
+          px={12}
           spacing={{ base: 8, md: 20 }}
           align={'center'}
           direction={'column'}
         >
-          <VStack spacing={4}>
-            <Box
-              backdropFilter="auto"
-              backdropBlur="1rem"
-              bgColor="whiteAlpha.50"
-              shadow="xl"
-              border="1px solid"
-              borderColor="whiteAlpha.200"
-              rounded="lg"
-              alignItems="center"
-              display="flex"
-              mt="2"
-              p={5}
-            >
-              <RocketLaunch size={36} weight="fill" />
-              <Box
-                ml="2"
-                color="whiteAlpha.800"
-                fontSize="lg"
-                textAlign="center"
-                fontWeight="bold"
-              >
-                Vem crescer com a Signature Mídia
-              </Box>
-            </Box>
-          </VStack>
           <Heading
             fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }}
             textAlign={{ base: 'center', md: 'center', lg: 'center' }}
             maxW="3xl"
             fontStyle="italic"
           >
-            "Vcê sabia que no Brasil tem 134 milhões de usuários de internet e 59% das
+            "Você sabia que no Brasil tem 134 milhões de usuários de internet e 59% das
             buscas são sobre produtos e serviços"
           </Heading>
           <Box
@@ -119,9 +91,9 @@ export function Notice() {
                         >
                           Clientes qualificados chegando no seu {''}
                           <Text color="orange.400" as="span">
-                            WhatsApp
+                            WhatsApp.
                           </Text>{' '}
-                          ou pelo{' '}
+                          {/* ou pelo{' '}
                           <Text color="orange.400" as="span">
                             Fúnil de Leads do
                           </Text>{' '}
@@ -133,7 +105,7 @@ export function Notice() {
                             isExternal
                           >
                             Leadster
-                          </Text>
+                          </Text> */}
                         </Heading>
                       </Box>
                     </VStack>

@@ -12,17 +12,8 @@ import {
 import { Handshake } from 'phosphor-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCards, Pagination } from 'swiper';
-import { useEffect } from 'react';
 
-export function HowSigHelpYou() {
-  // useEffect(() => {
-  //   const stylesheet = document.styleSheets[0];
-  //   stylesheet.insertRule(
-  //     '.swiper-pagination-bullet-active { background: #dd6b20 !important;}',
-  //     0
-  //   );
-  // }, []);
-
+export function WhatSigDoes() {
   return (
     <Box bgGradient="linear(to-t, rgba(193, 94, 3, 0.5), blackAlpha.700 80%)">
       <Container maxW={'5xl'}>
@@ -33,43 +24,13 @@ export function HowSigHelpYou() {
           align={'center'}
           direction={'column'}
         >
-          <VStack spacing={4}>
-            <Box
-              backdropFilter="auto"
-              backdropBlur="1rem"
-              bgColor="whiteAlpha.50"
-              shadow="xl"
-              border="1px solid"
-              borderColor="whiteAlpha.200"
-              rounded="lg"
-              alignItems="center"
-              display="flex"
-              mt="2"
-              p={5}
-            >
-              <Handshake size={36} weight="fill" />
-              <Box
-                ml="2"
-                color="whiteAlpha.800"
-                fontSize="lg"
-                textAlign="center"
-                fontWeight="bold"
-              >
-                O que a{' '}
-                <Text as="span" color="orange.400">
-                  Signature Mídia
-                </Text>{' '}
-                faz?
-              </Box>
-            </Box>
-          </VStack>
           <Heading
             fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }}
             textAlign={{ base: 'center', md: 'center', lg: 'center' }}
           >
             <Text color="orange.300" textShadow="#000 1px 1px">
-              Nossa missão é ajudar pequenas e médias empresas a se posicionarem e
-              venderem mais através das mídias sociais.
+              A missão da <i>Signature Mídia</i> é ajudar pequenas e médias empresas a
+              se posicionarem e venderem mais através das mídias sociais.
             </Text>{' '}
             <Text color="whiteAlpha.800" as="span" textShadow="#000 1px 1px">
               Fazemos isso para que você possa enxergar a oportunidade de negócio em
@@ -95,9 +56,11 @@ export function HowSigHelpYou() {
                   fontSize={{ base: 'lg', md: '2xl', lg: '3xl' }}
                   textAlign={{ base: 'center', md: 'center', lg: 'center' }}
                   maxW="2xl"
-                  fontStyle="italic"
                 >
-                  São <Text color="orange.400">+ de 50 clientes</Text> satisfeitos
+                  <Text color="orange.400" fontStyle={'italic'}>
+                    + de 50 clientes
+                  </Text>{' '}
+                  satisfeitos
                 </Heading>
               </Box>
               <Box>
@@ -105,10 +68,11 @@ export function HowSigHelpYou() {
                   fontSize={{ base: 'lg', md: '2xl', lg: '3xl' }}
                   textAlign={{ base: 'center', md: 'center', lg: 'center' }}
                   maxW="2xl"
-                  fontStyle="italic"
                 >
-                  São <Text color="orange.400">+ de 40 Landing Pages</Text> criadas para
-                  vários negócios
+                  <Text color="orange.400" fontStyle={'italic'}>
+                    + de 40 Landing Pages
+                  </Text>{' '}
+                  criadas para vários negócios
                 </Heading>
               </Box>
               <Box>
@@ -116,9 +80,13 @@ export function HowSigHelpYou() {
                   fontSize={{ base: 'lg', md: '2xl', lg: '3xl' }}
                   textAlign={{ base: 'center', md: 'center', lg: 'center' }}
                   maxW="2xl"
-                  fontStyle="italic"
                 >
-                  São <Text color="orange.400">+ de 33 feedbacks</Text> no Google
+                  Somos <Text color="yellow.400"> ⭐⭐⭐⭐⭐</Text>{' '}
+                  <Text as="span" color="yellow.400">
+                    {' '}
+                    5 estrelas
+                  </Text>
+                  <Text>no Google</Text>
                 </Heading>
               </Box>
             </SimpleGrid>
@@ -158,27 +126,32 @@ export function HowSigHelpYou() {
           >
             <SwiperSlide>
               <Box rounded="lg" boxSize={{ base: 'xs', md: '2xl' }}>
-                <NextImage sizes="auto" rounded="lg" src="/img/jessicalp.jpg" />
+                <NextImage sizes="auto" rounded="lg" src="/img/leticiarosalp.webp" />
               </Box>
             </SwiperSlide>
             <SwiperSlide>
               <Box rounded="lg" boxSize={{ base: 'xs', md: '2xl' }}>
-                <NextImage sizes="auto" rounded="lg" src="/img/mayanalp.jpg" />
+                <NextImage sizes="auto" rounded="lg" src="/img/mayanalp.webp" />
               </Box>
             </SwiperSlide>
             <SwiperSlide>
               <Box rounded="lg" boxSize={{ base: 'xs', md: '2xl' }}>
-                <NextImage sizes="auto" rounded="lg" src="/img/humbertolp.jpg" />
+                <NextImage sizes="auto" rounded="lg" src="/img/humbertolp.webp" />
               </Box>
             </SwiperSlide>
             <SwiperSlide>
               <Box rounded="lg" boxSize={{ base: 'xs', md: '2xl' }}>
-                <NextImage sizes="auto" rounded="lg" src="/img/gustavolp.jpg" />
+                <NextImage sizes="auto" rounded="lg" src="/img/gustavolp.webp" />
               </Box>
             </SwiperSlide>
             <SwiperSlide>
               <Box rounded="lg" boxSize={{ base: 'xs', md: '2xl' }}>
-                <NextImage sizes="auto" rounded="lg" src="/img/contadorlp.jpg" />
+                <NextImage sizes="auto" rounded="lg" src="/img/thaiscardosolp.webp" />
+              </Box>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Box rounded="lg" boxSize={{ base: 'xs', md: '2xl' }}>
+                <NextImage sizes="auto" rounded="lg" src="/img/contadorlp.webp" />
               </Box>
             </SwiperSlide>
           </Swiper>

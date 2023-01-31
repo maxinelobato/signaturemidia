@@ -1,27 +1,27 @@
 import type { NextPage } from 'next';
-import { About } from '../components/About';
-import { AboutHelpYou } from '../components/AboutHelpYou';
+import { AboutSigHelp } from '../components/AboutSigHelp';
 import { Faq } from '../components/Faq';
 import { Footer } from '../components/Footer';
-import { HowSigHelpYou } from '../components/HowSigHelpYou';
-import { NavbarOption } from '../components/NavbarOption';
-import { Notice } from '../components/Notice';
-import { AboutClients } from '../components/SigClients/AboutClients';
-import { TeamSig } from '../components/TeamSig';
-import { WithSpeechBubbles } from '../components/WithSpeechBubbles';
+import { GoogleReviews } from '../components/GoogleReviews';
+import { GrowingWithUs } from '../components/GrowingWithUs';
+import { HomePage } from '../components/HomePage';
+import { MeetSignature } from '../components/MeetSignature';
+import { Navbar } from '../components/Navbar';
+import { SucessCases } from '../components/SigClients/SucessCases';
+import { WhatSigDoes } from '../components/WhatSigDoes';
 
 const Home: NextPage = () => {
   return (
     <>
-      <NavbarOption />
-      <About />
-      <AboutHelpYou />
-      <AboutClients />
-      <Notice />
-      <HowSigHelpYou />
-      <WithSpeechBubbles />
+      <Navbar />
+      <HomePage />
+      <AboutSigHelp />
+      <SucessCases />
+      <GrowingWithUs />
+      <WhatSigDoes />
+      <GoogleReviews />
       <Faq />
-      <TeamSig />
+      <MeetSignature />
       <Footer />
     </>
   );
