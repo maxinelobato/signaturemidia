@@ -118,7 +118,6 @@ export function WhatSigDoes() {
             effect={'cards'}
             grabCursor={true}
             slidesPerView={'auto'}
-            spaceBetween={30}
             pagination={{
               clickable: true,
             }}

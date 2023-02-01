@@ -16,7 +16,6 @@ import {
   CircleWavyCheck,
   Heart,
   PresentationChart,
-  RocketLaunch,
   UsersThree,
 } from 'phosphor-react';
 
